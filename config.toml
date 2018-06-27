@@ -17,7 +17,7 @@ googleAnalytics = "UA-72551408-1"
 
 [params]
   subtitle = "컴퓨터할줄모름"
-  logo = "images/avatar.jpg"
+  logo = "img/avatar.jpg"
   favicon = "/favicon.png"
   commit = false
   rss = true
