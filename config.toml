@@ -1,0 +1,57 @@
+baseURL = "https://koyo.kr/"
+canonifyURLs = true
+title = "KOYO KR"
+theme = "beautifulhugo"
+languageCode = "ko"
+hasCJKLanguage = true
+metaDataFormat = "yaml"
+#pygmentsStyle = "github"
+pygmentsUseClasses = true
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+disqusShortname = "koyo"
+googleAnalytics = "UA-72551408-1"
+
+[permalinks]
+  post = "/post/:slug/"
+
+[params]
+  subtitle = "컴퓨터할줄모름"
+  logo = "images/avatar.jpg"
+  favicon = "/favicon.png"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  useHLJS = false
+  socialShare = false
+
+[author]
+  name = "koyo"
+  website = "koyo.kr"
+  email = "koyo@koyo.kr"
+  github = "koyokr"
+  linkedin = "younghun-ko-249125135"
+
+[[menu.main]]
+  name = "Home"
+  url = ""
+  weight = 1
+
+[[menu.main]]
+  name = "Categories"
+  url = "categories"
+  weight = 2
+
+[[menu.main]]
+  name = "Tags"
+  url = "tags"
+  weight = 3
+
+[[menu.main]]
+  name = "About"
+  url = "page/about/"
+  weight = 4
+
+[sitemap]
+  priority = 0.5

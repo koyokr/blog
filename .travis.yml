@@ -1,0 +1,21 @@
+language: go
+go:
+  - "1.10.3"
+install:
+  - go get github.com/gohugoio/hugo
+before_script:
+  - mkdir static/css
+  - hugo gen chromastyles --style github > static/css/syntax.css
+script:
+  - hugo
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: public
+  repo: koyokr/koyokr.github.io
+  target-branch: master
+  committer-from-gh: true
+  on:
+    branch: master
