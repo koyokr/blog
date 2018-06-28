@@ -157,7 +157,7 @@ cat exchange.s
 
 위 명령어로 어셈블리 코드를 보자
 
-```x86asm
+```asm
 exchange:
 .LFB0:
     .cfi_startproc

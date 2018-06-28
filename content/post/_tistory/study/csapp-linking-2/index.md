@@ -299,7 +299,7 @@ gcc -I. -o intc int.c mymalloc.o
 
 실행결과는 다음과 같다.
 
-```sh
+```console
 $ ./intc
 malloc(32) = 0x5647549ed010
 free(0x5647549ed010)
@@ -348,7 +348,7 @@ gcc -Wl,--wrap,malloc -Wl,--wrap,free -o intl int.o mymalloc.o
 
 실행결과는 다음과 같다.
 
-```sh
+```console
 $ ./intl
 malloc(32) = 0x55e5d4ba2010
 free(0x55e5d4ba2010)
@@ -425,7 +425,7 @@ LD_PRELOAD=./mymalloc.so ./intr
 
 실행 결과는 다음과 같다.
 
-```sh
+```console
 $ LD_PRELOAD=./mymalloc.so ./intr
 malloc(32) = 0x55c21567d010
 malloc(1024) = 0x55c21567d010

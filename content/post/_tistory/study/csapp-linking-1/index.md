@@ -213,7 +213,7 @@ foo5.c에 int형의 강한 심볼 x가 있고, bar5.c에서 double형의 약한 
 
 이걸 빌드해서 실행해보면...
 
-```sh
+```console
 $ gcc -Og -o foobar5 foo5.c bar5.c
 /usr/bin/ld: Warning: alignment 4 of symbol `x' in /tmp/cckW0czr.o is smaller than 8 in /tmp/ccPHbxS6.o
 $ ./foobar5

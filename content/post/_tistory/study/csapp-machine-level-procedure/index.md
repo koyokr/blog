@@ -68,7 +68,7 @@ int main() {
 
 gcc를 명령어 옵션 -Og로 실행하고 objdump -d first_last를 실행한 결과.
 
-```x86asm
+```c-objdump
 0000000000000660 <last>:
  660:   48 89 f8                mov    %rdi,%rax    ; L1: u
  663:   48 0f af c6             imul   %rsi,%rax    ; L2: u * v
@@ -141,7 +141,7 @@ void proc(long  a1, long  *a1p,
 }
 ```
 
-```x86asm
+```asm
 proc:
 .LFB0:
     .cfi_startproc
@@ -194,7 +194,7 @@ long caller() {
 gcc -Og -S -fno-stack-protector swap_add.c를 실행해서
 caller 프로시저를 봤다.
 
-```x86asm
+```asm
 caller:
 .LFB1:
     .cfi_startproc
@@ -255,7 +255,7 @@ long P(long x, long y) {
 
 P의 어셈블리 코드를 확인하면...
 
-```x86asm
+```asm
 P:
 .LFB1:
     .cfi_startproc

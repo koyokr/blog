@@ -99,7 +99,7 @@ float float_mov(float v1, float *src, float *dst) {
 
 아래는 "gcc -Og -S float_mov.c"의 결과.
 
-```x86asm
+```asm
 float_mov:
     movss   (%rdi), %xmm1
     movss   %xmm0, (%rsi)
@@ -109,7 +109,7 @@ float_mov:
 
 아래는 "gcc -mavx2 -Og -S float_mov.c"의 결과.
 
-```x86asm
+```asm
 float_mov:
     vmovss  (%rdi), %xmm1    ; Read v2 from src
     vmovss  %xmm0, (%rsi)    ; Write v1 to dst
@@ -161,7 +161,7 @@ double fcvt(int i, float *fp, double *dp, long *lp) {
 }
 ```
 
-```x86asm
+```asm
 fcvt:
     vmovss      (%rsi), %xmm0          ; Get f = *fp
     movq        (%rcx), %rax           ; Get l = *lp
@@ -205,7 +205,7 @@ double funct(double a, float x, double b, int i) {
 }
 ```
 
-```x86asm
+```asm
 funct:
     vcvtss2sd   %xmm1, %xmm1, %xmm1    ; Convert x to double
     vmulsd      %xmm0, %xmm1, %xmm0    ; Multiply a by x
@@ -230,7 +230,7 @@ double cel2fahr(double temp) {
 }
 ```
 
-```x86asm
+```asm
 cel2fahr:
 .LFB0:
     .cfi_startproc
@@ -280,7 +280,7 @@ double absolute(double x) {
 
 gcc -mavx2 -Og -S math.c을 실행하면...
 
-```x86asm
+```asm
 zero:
     vxorpd  %xmm0, %xmm0, %xmm0
     ret
@@ -347,7 +347,7 @@ range_t find_range(float x) {
 
 아래는 gcc -mavx2 -O2 -S find_range.c를 실행한 결과.
 
-```x86asm
+```asm
 find_range:
     vxorps      %xmm1, %xmm1, %xmm1
     vucomiss    %xmm0, %xmm1    ; Compare 0:x

@@ -38,7 +38,7 @@ wireshark
 
 ### - monitor mode 지원 확인하는 방법
 
-```dos
+```bat
 netsh wlan show wirelesscapabilities
 ```
 
@@ -62,7 +62,7 @@ WlanHelper N150UA mode
 
 #### 인터페이스의 mode를 확인
 
-```sh
+```console
 > WlanHelper N150UA mode
 managed
 ```
@@ -73,7 +73,7 @@ WlanHelper N150UA mode monitor
 
 #### 인터페이스의 mode를 monitor mode로 변경
 
-```sh
+```console
 > WlanHelper N150UA mode monitor
 Success
 ```

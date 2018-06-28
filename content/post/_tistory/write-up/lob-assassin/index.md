@@ -73,9 +73,9 @@ ebp에 내가 입력한 스택 주소가 입력된다.
 
 0x080484df는 leave와 ret 명령어가 있는 주소다.
 
-실행 과정을 잘 써보면 이렇게 된다. (intel이라 생각하고 읽어 주샘)
+실행 과정을 잘 써보면 이렇게 된다.
 
-```x86asm
+```nasm
 main:
     push ebp (sfp에 ebp PUSH)
     mov ebp, esp

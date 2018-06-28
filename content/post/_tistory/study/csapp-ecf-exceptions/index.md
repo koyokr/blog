@@ -185,7 +185,7 @@ abort 핸들러는 절대로 응용 프로그램으로 제어를 리턴하지 �
 
 시스템 콜을 직접 사용해보자.
 
-```x86asm
+```asm
     .section        .rodata
 .LC0:
     .string "hello, world\n"

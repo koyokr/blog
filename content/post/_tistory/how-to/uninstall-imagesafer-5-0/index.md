@@ -10,7 +10,7 @@ markup: mmark
 
 관리자 권한 명령 프롬프트에서 다음 명령어를 실행한다.
 
-```dos
+```bat
 sc stop "IMGSF50_Svc"
 sc delete "IMGSF50_Svc"
 ```

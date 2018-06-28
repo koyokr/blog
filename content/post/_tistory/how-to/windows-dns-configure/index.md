@@ -7,7 +7,7 @@ markup: mmark
 aliases: [/96/]
 ---
 
-```dos
+```bat
 netsh interface ip set dns "로컬 영역 연결" static 1.1.1.1 primary
 netsh interface ip add dns "로컬 영역 연결" 1.0.0.1
 ```
@@ -16,7 +16,7 @@ Cloudflare Public DNS Server
 
 빠르다
 
-```dos
+```bat
 netsh interface ip set dns "로컬 영역 연결" static 9.9.9.9 primary
 netsh interface ip add dns "로컬 영역 연결" 9.9.9.10
 ipconfig /flushdns
@@ -26,7 +26,7 @@ IBM Public DNS Server
 
 1.1.1.1이 잘 안되는 것 같을 때.
 
-```dos
+```bat
 (
 echo  #
 echo      13.229.188.59      github.com

@@ -45,7 +45,7 @@ long scale(long x, long y, long z) {
 
 gcc -O1 -S scale.c 명령어로 컴파일하자.
 
-```x86asm
+```asm
 scale:
 .LFB0:
     .cfi_startproc
@@ -75,7 +75,7 @@ long shitf_left4_rightn(long x, long n) {
 
 어셈블리 코드는 아래와 같다.
 
-```x86asm
+```asm
 shift_left4_rightn:
 .LFB0:
     .cfi_startproc
@@ -116,7 +116,7 @@ void store_uprod(uint128_t *dest, uint64_t x, uint64_t y) {
 }
 ```
 
-```x86asm
+```asm
 store_uprod:
 .LFB4:
     .cfi_startproc
@@ -143,7 +143,7 @@ void remdiv(long x, long y,
 }
 ```
 
-```x86asm
+```asm
 remdiv:
 .LFB0:
     .cfi_startproc

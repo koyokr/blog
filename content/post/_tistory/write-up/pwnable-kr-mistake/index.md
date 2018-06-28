@@ -71,7 +71,7 @@ int main(int argc, char* argv[]){
 코드의 흐름은 password 파일로부터 문자를 읽어와 pw_buf 배열에 담고,
 사용자로부터 pw_buf2 배열에 문자를 받아와 비교하는 것이다.
 
-```x86asm
+```c-objdump
 (gdb) r
 Starting program: /home/mistake/mistake
 warning: no loadable sections found in added symbol-file system-supplied DSO at 0x7fffc83fe000

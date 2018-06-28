@@ -92,7 +92,7 @@ getcap /usr/sbin/tcpdump
 
 잘 설치됐는지 확인.
 
-```sh
+```console
 $ getcap /usr/sbin/tcpdump
 /usr/sbin/tcpdump = cap_net_admin,cap_net_raw+eip
 ```
@@ -242,7 +242,7 @@ wget https://download.sysinternals.com/files/ProcessExplorer.zip
 
 이제 xp 가상머신을 실행해서 게스트 확장을 설치하고,
 
-```sh
+```console
 > ipconfig
 Windows IP Configuration
 

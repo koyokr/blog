@@ -62,7 +62,7 @@ int main(){
 
 이제 디어셈블된 코드를 보면서 문제를 풀어야 한다.
 
-```x86asm
+```c-objdump
 Dump of assembler code for function main:
    ...
    0x00008d68 <+44>:    bl      0x8cd4 <key1>
@@ -82,7 +82,7 @@ key1, key2, key3 함수에서 r0에 저장한 값을
 r2에 모두 더하고 사용자가 입력한 값과 비교하는 부분이다.
 각 함수가 r0에 어떤 값을 넘기는지를 보면 된다.
 
-```x86asm
+```c-objdump
 Dump of assembler code for function key1:
    0x00008cd4 <+0>:     push    {r11}       ; (str r11, [sp, #-4]!)
    0x00008cd8 <+4>:     add     r11, sp, #0
@@ -102,7 +102,7 @@ pc에 대해 찾아보니 program counter로 다음에 실행될 명령어의 �
 다음에 실행될 명령어의 주소를 담는다고 한다.
 pc가 있는 명령어의 다음 명령어의 주소값을 담는다는 뜻이 되겠다.
 
-```x86asm
+```c-objdump
 Dump of assembler code for function main:
    ...
    0x00008d50 <+20>:    ldr     r0, [pc, #104]      ; 0x8dc0 <main+132>
@@ -119,7 +119,7 @@ Dump of assembler code for function main:
 pc가 실행하는 명령어의 주소값에 8을 더한 만큼을 가리킨다고 가정하면
 key1 함수는 0x8ce4를 반환한다.
 
-```x86asm
+```c-objdump
 Dump of assembler code for function key2:
    0x00008cf0 <+0>:     push    {r11}       ; (str r11, [sp, #-4]!)
    0x00008cf4 <+4>:     add     r11, sp, #0
@@ -141,7 +141,7 @@ End of assembler dump.
 key2 함수를 보면 0x8d04에서 pc 값은 0x8d04+8=0x8d0c일 것이고,
 0x8d06에서 adds 명령어로 4를 더해주어 반환하므로 0x8d0c+4=0x8d10을 반환한다.
 
-```x86asm
+```c-objdump
 Dump of assembler code for function key3:
    0x00008d20 <+0>:     push    {r11}       ; (str r11, [sp, #-4]!)
    0x00008d24 <+4>:     add     r11, sp, #0
@@ -161,7 +161,7 @@ lr은 0x8d7c+4=0x8d80을 가리킨다.
 
 각 함수가 반환하는 값을 다 더하면 10진수로 108404가 되는 걸 알 수 있다.
 
-```sh
+```console
 $ ./leg
 Daddy has very strong arm! : 108404
 I have strong leg :P
@@ -192,7 +192,7 @@ pc는 다음 명령어의 주소를 가리키게 된다.
 즉, 명령어를 execute를 하는 시점에서 다음 명령어의 fetch는 끝난 상황이며
 pc는 execute하는 명령어에서 두 번째 명령어의 주소값을 가리키는 것이다.
 
-```x86asm
+```c-objdump
 Dump of assembler code for function key2:
    0x00008cf0 <+0>:     push    {r11}       ; (str r11, [sp, #-4]!)
    0x00008cf4 <+4>:     add     r11, sp, #0

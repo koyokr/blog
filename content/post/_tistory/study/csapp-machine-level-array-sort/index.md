@@ -35,7 +35,7 @@ long sum_element(long i, long j) {
 }
 ```
 
-```x86asm
+```asm
 sum_element:
     leaq    0(,%rdi,8), %rdx
     subq    %rdi, %rdx
@@ -76,7 +76,7 @@ void fix_set_diag(fix_matrix A, int val) {
 
 위와 같은 코드를 -O1 최적화 수준으로 컴파일하면
 
-```x86asm
+```asm
 fix_set_diag:
 .LFB0:
     .cfi_startproc
@@ -119,7 +119,7 @@ int var_ele(long n, int A[n][n], long i, long j) {
 }
 ```
 
-```x86asm
+```asm
 var_ele:
 .LFB0:
     .cfi_startproc

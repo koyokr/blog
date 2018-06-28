@@ -121,7 +121,7 @@ travis-ci 서비스를 이용해서 컨텐츠를 갱신할 때 자동으로 결�
 
 바로 `.travis.yml` 파일을 만들어서 연동까지 했다.
 
-```yml
+```yaml
 language: go
 go:
   - "1.10.1"

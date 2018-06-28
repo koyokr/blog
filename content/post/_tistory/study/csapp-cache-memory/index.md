@@ -174,7 +174,7 @@ void mmm2(int n,
 gcc를 실행한 바이너리에 1024 * 1024 크기의 double 배열로
 mmm 함수와 mmm2 함수를 호출한 결과.
 
-```sh
+```console
 $ ./mmm2
 mmm
 11.118206269

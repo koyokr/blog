@@ -113,7 +113,7 @@ Available 탭에서 NppExec를 찾고 설치하면 된다.
 
 ![NppExec > Execute 2](nppexec-execute-2.png)
 
-```dos
+```bat
 cl /FAs "$(FULL_CURRENT_PATH)" /link /debug /opt:icf,ref
 ```
 
@@ -128,7 +128,7 @@ cl /FAs "$(FULL_CURRENT_PATH)" /link /debug /opt:icf,ref
 
 Execute에 넣을 명령어가 완성됐다면 코드 작성 후에 들어가서 OK 버튼 눌러주자.
 
-```x86asm
+```nasm
 ; Function compile flags: /Odtp
 ; File c:\users\ko\documents\notepad\test.c
 _TEXT   SEGMENT

@@ -99,7 +99,7 @@ long cmp(long a, long b) {
 
 gcc -Og -S cmp.c로 컴파일.
 
-```x86asm
+```asm
 comp:
 .LFB0:
     .cfi_startproc
@@ -157,7 +157,7 @@ long absdiff_se(long x, long y) {
 
 gcc -Og -S absdiff_se.c의 결과로 나온 absdiff_se.s의 내용은 아래와 같다.
 
-```x86asm
+```asm
 absdiff_se:
 .LFB0:
     .cfi_startproc
@@ -178,7 +178,7 @@ absdiff_se:
 gcc -c absdiff_se.s(또는 gcc -Og -c absdiff_se.c)의 결과로 나온
 absdiff_se.o의 역어셈블 내용은 아래와 같다.
 
-```x86asm
+```c-objdump
 0000000000000000 <absdiff_se>:
    0:   48 39 f7                cmp    %rsi,%rdi
    3:   7c 0f                   jl     14 <absdiff_se+0x14>
@@ -220,7 +220,7 @@ else
 
 위와 같은 형태에 대한 어셈블리 구현은 아래와 같은 C 문법의 제어흐름을 가진다.
 
-```x86asm
+```c
     t = test-expr;
     if (!t)
         goto false;
@@ -285,7 +285,7 @@ long absdiff(long x, long y) {
 Og 옵션으로 컴파일했을 때.
 cmpq %rsi, %rdi의 결과에 따라서 분기가 나뉜다.
 
-```x86asm
+```asm
 absdiff:
 .LFB0:
     .cfi_startproc
@@ -304,7 +304,7 @@ absdiff:
 O1 옵션으로 컴파일했을 때.
 분기에 따른 계산을 모두 마쳐놓고 조건에 따라서 값을 복사하고 있다.
 
-```x86asm
+```asm
 absdiff:
 .LFB0:
     .cfi_startproc
@@ -527,7 +527,7 @@ void switch_eg(long x, long n, long *dest) {
 
 명령줄 옵션 -Og -S를 줘서 gcc를 실행한 결과이다.
 
-```x86asm
+```asm
 switch_eg:
 .LFB0:
     .cfi_startproc
@@ -576,7 +576,7 @@ switch_eg:
 
 궁금해서 실행파일을 빌드하고 찾아봤다.
 
-```x86asm
+```c-objdump
 00000000000006c0 <switch_eg>:
  6c0:   48 83 ee 64             sub    $0x64,%rsi
  6c4:   48 83 fe 06             cmp    $0x6,%rsi
@@ -605,7 +605,7 @@ objdump -sj .rodata switch_eg
 
 위 명령어를 쳐서 rodata 영역을 봤다.
 
-```sh
+```console
 $ objdump -sj .rodate switch_eg
 
 switch_eg:     file format elf64-x86-64

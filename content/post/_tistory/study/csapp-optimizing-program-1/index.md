@@ -74,7 +74,7 @@ void sum_rows1(double *a, double *b, long n) {
 어셈블리 코드로 확인해보자.
 명령어 옵션 -O1으로 gcc를 실행한 결과다.
 
-```x86asm
+```asm
 .L3:
     vmovsd  (%rax), %xmm0           ; FP load
     vaddsd  (%rdi), %xmm0, %xmm0    ; FP add
@@ -124,7 +124,7 @@ void sum_rows2(double *a, double *b, long n) {
 
 어셈블리 코드를 확인하자.
 
-```x86asm
+```asm
 .L16:
     vaddsd  (%rdi), %xmm0, %xmm0    ; FP load + add
     addq    $8, %rdi
@@ -151,7 +151,7 @@ void sum_rows1b(double *restrict a, double *restrict b, long n) {
 }
 ```
 
-```x86asm
+```asm
 .L9:
     vaddsd  (%rdi), %xmm0, %xmm0    ; FP load + add
     addq    $8, %rdi

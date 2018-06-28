@@ -125,7 +125,7 @@ int main () {
 
 실행 하면 이렇게 나온다.
 
-```sh
+```console
 $ ./socket
 [S] socket
 [S] bind

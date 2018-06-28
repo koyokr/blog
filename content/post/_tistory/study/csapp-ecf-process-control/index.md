@@ -91,7 +91,7 @@ int main()
 
 내 경우엔 다음과 같은 출력이 나왔다.
 
-```sh
+```console
 $ ./fork
 parent: x=0
 $ child : x=2
@@ -193,7 +193,7 @@ int main()
 }
 ```
 
-```sh
+```console
 $ ./waitpid1
 child 13197 terminated normally with exit status=101
 child 13196 terminated normally with exit status=100

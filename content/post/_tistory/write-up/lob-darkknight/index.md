@@ -51,7 +51,7 @@ ret 영역에는 system 함수 주소를 넣고,
 system 함수에 인자로 ebp+8이 될 곳에 "/bin/sh" 문자열의 주소를 넣으면
 문제를 풀 수 있다.
 
-```sh
+```console
 $ cp bugbear augbear
 $ ls -l
 total 28
@@ -62,8 +62,11 @@ total 28
 
 gdb랑 core 덤프용으로 bugbear를 augbear로 복사하고
 
-```x86asm
-$ gdb augbear -q
+```sh
+gdb augbear -q
+```
+
+```c-objdump
 (gdb) b main
 Breakpoint 1 at 0x8048436
 (gdb) r

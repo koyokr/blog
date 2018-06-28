@@ -162,7 +162,7 @@ YYCURSOR가 null값을 만나면 end 상태가 되고,
 헥스 상태에서 null값을 만나면 "hex"를 반환한다.
 이도저도 아니면 "err"를 반환한다.
 
-```sh
+```console
 $ re2c -i -o example.c e.re
 $ make example
 cc     example.c   -o example
@@ -266,7 +266,7 @@ clean:
 
 이제 빌드하고 실행해보면
 
-```sh
+```console
 $ make
 re2c -i -o example.c example.re
 bison -dl -o example.tab.c example.y

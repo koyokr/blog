@@ -140,7 +140,7 @@ int main() {
 }
 ```
 
-```x86asm
+```c-objdump
 gef> info stack
 #0  f (n=50, k=0) at bc.cpp:4
 #1  0x00005555555549d5 in f (n=51, k=1) at bc.cpp:7
@@ -168,7 +168,7 @@ gef> info stack
 
 그냥 재귀로 된 건 이렇게 스택이 쌓이지만...
 
-```x86asm
+```nasm
 f(int, int, int, int):
   mov eax, edx
   sub edi, esi

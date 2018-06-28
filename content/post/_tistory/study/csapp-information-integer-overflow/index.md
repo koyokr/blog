@@ -66,7 +66,7 @@ int main() {
 
 실행결과
 
-```sh
+```console
 $ make uadd_ok
 cc     uadd_ok.c   -o uadd_ok
 $ ./uadd_ok
@@ -199,7 +199,7 @@ int main() {
 
 실행결과.
 
-```sh
+```console
 $ ./test
 u3:     5b06
 t3:     5b06

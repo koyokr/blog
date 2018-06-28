@@ -17,7 +17,7 @@ long double은 64비트 환경에서는 16바이트인 것도 오늘 알았다.
 그런데 방금 printf로 int64_t 값 출력하려니까 32비트 환경에서는 %lld 써야 하고,
 64비트 환경에서는 %ld 써야 한다.
 
-```sh
+```console
 $ ./type32
 ### 1 Byte = 8 bit ###
 long : 4 byte

@@ -57,7 +57,7 @@ data_t가 double이고 OP가 *일 때 생성되는 어셈블리 코드를 비교
 
 combine1 함수의 for문 어셈블리 코드.
 
-```x86asm
+```asm
 .L16:
     movq    %r13, %rdx
     movq    %rbx, %rsi
@@ -73,7 +73,7 @@ combine1 함수의 for문 어셈블리 코드.
 
 combine4 함수의 for문 어셈블리 코드.
 
-```x86asm
+```asm
 .L34:
     vmulsd  (%rax), %xmm0, %xmm0    ; acc = acc * d[i]
     addq    $4, %rax                ; i++
@@ -143,7 +143,7 @@ void combine5(vec_ptr v, data_t *dest) {
 
 기계어 (첫번째 for문)
 
-```x86asm
+```asm
 .L39:
     vmulsd  (%rdx,%rax,8), %xmm0, %xmm0     ; data[i]
     vmulsd  8(%rdx,%rax,8), %xmm0, %xmm0    ; data[i+1]
@@ -196,7 +196,7 @@ for (i = 0; i < limit; i += 2) {
 
 어셈블리 코드는 다음과 같이 변한다.
 
-```x86asm
+```asm
 .L66:
     vmovsd  (%rdx,%rax,8), %xmm1            ; %xmm1 = data[i]
     vmulsd  8(%rdx,%rax,8), %xmm1, %xmm1    ; %xmm1 *= data[i+1]
@@ -266,7 +266,7 @@ void combine6(vec_ptr v, data_t *dest) {
 }
 ```
 
-```x86asm
+```asm
 .L57:
     vmulsd  (%rdx,%rax,8), %xmm0, %xmm0     ; acc0 = acc0 * data[i];
     vmulsd  8(%rdx,%rax,8), %xmm1, %xmm1    ; acc1 = acc1 * data[i+1];

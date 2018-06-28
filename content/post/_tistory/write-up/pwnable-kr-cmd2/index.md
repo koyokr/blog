@@ -50,7 +50,7 @@ int main(int argc, char* argv[], char** envp){
 
 ## 풀이
 
-```sh
+```console
 $ echo /
 /
 $ $(echo /)

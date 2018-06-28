@@ -52,11 +52,13 @@ let g:syntastic_enable_racket_racket_checker = 1
 
 vim에서 아래 명령어를 입력하여 vim-racket 설치
 
+```vim
 :PlugInstall
+```
 
 아래 코드를 실행해보자
 
-```lisp
+```racket
 #lang sicp
 
 (inc

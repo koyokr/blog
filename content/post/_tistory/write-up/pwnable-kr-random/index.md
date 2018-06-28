@@ -12,7 +12,7 @@ markup: mmark
 
 문제를 풀면 1포인트를 준다.
 
-```sh
+```console
 $ ls -l
 total 20
 -r--r----- 1 random_pwn root     49 Jun 30  2014 flag
@@ -51,7 +51,7 @@ rand 함수는 아마 시드값 같은 것을 임의로 입력하지 않으면
 항상 같은 값을 반환한다고 알고 있다.
 random 변수의 고정된 값을 알면 풀 수 있는 문제다.
 
-```x86asm
+```c-objdump
 00000000004005f4 <main>:
   4005f4:       55                      push   %rbp
   4005f5:       48 89 e5                mov    %rsp,%rbp
@@ -88,7 +88,7 @@ main 함수를 확인하면 rand 함수를 호출해서
 [rbp-0x4]에 값을 넣는 것을 확인할 수 있다.
 [rbp-0x8]는 내가 입력하는 key 변수에 해당한다.
 
-```x86asm
+```c-objdump
 (gdb) b *main+108
 Breakpoint 1 at 0x400660
 (gdb) r
@@ -105,7 +105,7 @@ Breakpoint 1, 0x0000000000400660 in main ()
 적당한 곳에 브레이크포인트를 걸어서 실행한 뒤에
 [rbp-0x4]에 있는 값을 확인하면 0x6b8b4567이 나온다.
 
-```
+```c
 0x6b8b4567 ^ 0xdeadbeef == 0xb526fb88
 ```
 

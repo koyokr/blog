@@ -205,7 +205,7 @@ int main()
 
 프로그램을 실행하니 다음과 같은 결과가 나왔다.
 
-```sh
+```console
 $ ./signal1
 Hello from child 34737
 Handler reaped child
@@ -245,7 +245,7 @@ void handler2(int sig)
 
 프로그램 실행 결과는 다음과 같다.
 
-```sh
+```console
 $ ./signal2
 Hello from child 34855
 Hello from child 34854
