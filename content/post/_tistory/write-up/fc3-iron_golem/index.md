@@ -45,9 +45,11 @@ buffer+264번지에 sfp, buffer+268번지에 ret이 있다. 이 단계는 sfp를
 
 RET sleding은 ret으로 ret 명령어가 있는 주소를 가리키는 걸 뜻한다.
 
-ret ret ret은 pop eip, pop eip, pop eip를 뜻하는데, 스택을 파괴하는 nop 느낌으로 쓰면 될듯.
+ret ret ret은 pop eip, pop eip, pop eip를 뜻하는데,
+스택을 파괴하는 nop 느낌으로 쓰면 될듯.
 
-이 문제에서 이걸 이용해서 어떻게 푸냐... 하면 execl 함수를 호출할 때 사용할 것이다.
+이 문제에서 이걸 이용해서 어떻게 푸냐... 하면
+execl 함수를 호출할 때 사용할 것이다.
 
 참고로 execl은 execl("/bin/sh", NULL); 같은 느낌으로 써주면 된다.
 
@@ -55,7 +57,8 @@ ret ret ret은 pop eip, pop eip, pop eip를 뜻하는데, 스택을 파괴하는
 
 ![gdb 1](gdb-1.png)
 
-execl(0x0083eff4, 0x00000000);과 같은 식으로 호출되면 참 그림이 좋을 것 같다. 0x007a5720을 오른쪽으로 2번 밀어주자.
+execl(0x0083eff4, 0x00000000);과 같은 식으로 호출되면 참 그림이 좋을 것 같다.
+0x007a5720을 오른쪽으로 2번 밀어주자.
 
 그럼 아래와 같은 코드가 완성된다.
 

@@ -8,16 +8,7 @@ markup: mmark
 
 정수 산술연산과 관련된 인스트럭션 정리.
 
-## 1. PUSH, POP 인스트럭션
-
-|Instruction|Effect|Description|
-|---|---|---|
-|pushq S|R[%rsp] <\- R[%rsp] - 8;<br>M[R[%rsp]] <\- S|Push quad word|
-|popq D|D <\- M[R[%rsp]];<br>R[%rsp] <\- R[%rsp] + 8|Pop quad word|
-
-사실 이 인스트럭션은 어제 글에 포함되는 게 더 적합한데... 글 수정은 귀찮고...
-
-## 2. 정수의 산술연산
+## 1. 정수의 산술연산
 
 |Instruction|Effect|Description|
 |---|---|---|
@@ -37,9 +28,11 @@ markup: mmark
 |sar k, D|D <\- D >>A k|Arithmetic right shift|
 |shr k, D|D <\- D >>L k|Logical right shift|
 
-leaq(Load Effective Address, Quad word) 인스트럭션은 movq 인스트럭션의 변형판이라고 보면 된다.
+leaq(Load Effective Address, Quad word) 인스트럭션은
+movq 인스트럭션의 변형판이라고 보면 된다.
 
-추가로 S에 & 연산자가 붙은 것이 차이점인데, 이 연산자는 C언어에서 주소를 반환하는 &연산자와 같다.
+추가로 S에 & 연산자가 붙은 것이 차이점인데,
+이 연산자는 C언어에서 주소를 반환하는 &연산자와 같다.
 
 이해를 위해 예제를 보자. 정수연산을 하는 코드다.
 
@@ -65,7 +58,8 @@ scale:
 
 주소연산과는 관련 없어보이는 이러한 연산에도 많이 쓰이는 것을 확인할 수 있다.
 
-sal, shl, sar, shr과 같은 쉬프트 연산의 source에는 상수 또는 단일 바이트 레지스터 %cl로 명시할 수 있다.
+sal, shl, sar, shr과 같은 쉬프트 연산의 source에는
+상수 또는 단일 바이트 레지스터 %cl로 명시할 수 있다.
 
 특정 레지스터 %cl만 operand로 허용하는 점이 특이하다.
 
@@ -93,9 +87,10 @@ shift_left4_rightn:
     .cfi_endproc
 ```
 
-%cl 오퍼랜드를 사용하기 위해 %esi의 값을 %ecx에 movl 인스트럭션으로 복사하는 것이 인상적이다.
+%cl 오퍼랜드를 사용하기 위해 %esi의 값을
+%ecx에 movl 인스트럭션으로 복사하는 것이 인상적이다.
 
-## 3. 특수 산술연산
+## 2. 특수 산술연산
 
 |Instruction|Effect|Description|
 |---|---|---|
@@ -105,9 +100,11 @@ shift_left4_rightn:
 |idivq S|R[%rdx] <\- R[%rdx]:R[%rax] mod S;<br>R[%rdx] <\- R[%rdx]:R[%rax] / S;|Signed divide|
 |divq S|R[%rdx] <\- R[%rdx]:R[%rax] mod S;<br>R[%rdx] <\- R[%rdx]:R[%rax] / S;|Unsigned divide|
 
-64비트 정수형간 곱셈의 결과값 표시를 위해서는 128비트가 필요하다. 참고로 128비트 워드는 oct word라고 불린다.
+64비트 정수형간 곱셈의 결과값 표시를 위해서는 128비트가 필요하다.
+참고로 128비트 워드는 oct word라고 불린다.
 
-곱셈 확인을 위해 아래 C코드의 어셈블리를 확인해본다. gcc에서 제공하는 __int128을 사용했다.
+곱셈 확인을 위해 아래 C코드의 어셈블리를 확인해본다.
+gcc에서 제공하는 __int128을 사용했다.
 
 ```c
 #include <inttypes.h>
@@ -131,7 +128,8 @@ store_uprod:
     .cfi_endproc
 ```
 
-계산결과 중 중요한 바이트가 %rdx에, 덜 중요한 바이트가 %rax에 대입된 것을 확인할 수 있다.
+계산결과 중 중요한 바이트가 %rdx에,
+덜 중요한 바이트가 %rax에 대입된 것을 확인할 수 있다.
 
 나눗셈도 확인해보자.
 
@@ -159,11 +157,12 @@ remdiv:
     .cfi_endproc
 ```
 
-divq을 사용하기 전에 128비트 %rdx:%rax가 준비돼있어야 한다. 보통은 64비트 %rax를 128비트 %rdx:%rax로 확장하는 cqto 인스트럭션을 사용한다.
+divq을 사용하기 전에 128비트 %rdx:%rax가 준비돼있어야 한다.
+보통은 64비트 %rax를 128비트 %rdx:%rax로 확장하는 cqto 인스트럭션을 사용한다.
 
 나눗셈 결과는 %rax에, 나머지 결과는 %rdx에 저장된다.
 
-## 4. 마무리
+## 3. 마무리
 
 제어문까지 쓰려고 했는데 헬스장 갈 시간이 돼서ㅎ
 

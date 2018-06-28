@@ -12,20 +12,22 @@ markup: mmark
 
 50점 문제
 
-
 ## 풀이
 
 아이다로 열어서 main 함수를 보면
 
 ![main in IDA](main-in-ida.png)
 
-Base64Decode 함수를 거쳐서 그 글자가 12글자를 넘지 않았을 때, memcpy 함수와 auth 함수를 실행할 수 있다.
+Base64Decode 함수를 거쳐서 그 글자가 12글자를 넘지 않았을 때,
+memcpy 함수와 auth 함수를 실행할 수 있다.
 
 auth 함수를 보면
 
 ![auth in IDA](auth-in-ida.png)
 
-위에 calc_md5 함수가 있고 f87cd601aa7fedca99018a8be88eda34가 있으니 base64decode과 calc_md5를 거친 문자열이 저 해쉬값과 같게 하면 문제가 풀릴 것 같다.
+위에 calc_md5 함수가 있고 f87cd601aa7fedca99018a8be88eda34가 있으니
+base64decode과 calc_md5를 거친 문자열이 저 해쉬값과 같게 하면
+문제가 풀릴 것 같다.
 
 ```sh
 $ ./login
@@ -56,7 +58,8 @@ Segmentation fault
 $
 ```
 
-input의 크기가 12바이트여서 12바이트에 맞게 AAAABBBBCCCC를 인코드한 문자열을 입력하면 segmentation fault가 뜬다.
+input의 크기가 12바이트여서 12바이트에 맞게
+AAAABBBBCCCC를 인코드한 문자열을 입력하면 segmentation fault가 뜬다.
 
 ```x86asm
 (gdb) r
@@ -86,9 +89,17 @@ gs             0x63     99
 (gdb)
 ```
 
-확인해보면 12바이트 중 마지막 4바이트의 값대로 ebp가 변조되어있다. 처음 4바이트 값은 0xdeadbeef로 놔둬야하고, 가운데 4바이트가 남게 되는데 여기에는 correct 함수의 주소를, 마지막 4바이트는 바로 가운데 4바이트가 있는 주소를 가리키도록 하면 된다.
+확인해보면 12바이트 중 마지막 4바이트의 값대로 ebp가 변조되어있다.
+처음 4바이트 값은 0xdeadbeef로 놔둬야하고,
+가운데 4바이트가 남게 되는데 여기에는 correct 함수의 주소를,
+마지막 4바이트는 바로 가운데 4바이트가 있는 주소를 가리키도록 하면 된다.
 
-12바이트가 있는 input의 주소는 0x0811eb40이고, correct 함수의 주소는 0x0804925f다. 주의해야할 점이 가운데 4바이트의 주소가 0x0811eb44라고 해서, ebp 값을 0x0811eb44로 변조하면 0x0811eb40이 가리키는 주소, 즉 자신이 있는 주소로 점프하게 된다.
+12바이트가 있는 input의 주소는 0x0811eb40이고,
+correct 함수의 주소는 0x0804925f다.
+
+주의해야할 점이 가운데 4바이트의 주소가 0x0811eb44라고 해서,
+ebp 값을 0x0811eb44로 변조하면 0x0811eb40이 가리키는 주소,
+즉 자신이 있는 주소로 점프하게 된다.
 
 ```x86asm
 (gdb) r

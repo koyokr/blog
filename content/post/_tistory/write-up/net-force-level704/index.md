@@ -58,6 +58,7 @@ markup: mmark
 the correct password for this challenge is periodiek
 ```
 
--문자가 붙은 것은 첫번째 글자를, +문자가 붙은 것은 두번째 글자를, 아무것도 붙지 않은 것은 모든 글자를 쓰면 올바른 패스워드가 나온다.
+-문자가 붙은 것은 첫번째 글자를, +문자가 붙은 것은 두번째 글자를,
+아무것도 붙지 않은 것은 모든 글자를 쓰면 올바른 패스워드가 나온다.
 
 답은 periodiek

@@ -118,6 +118,7 @@ s.close()
 
 자꾸 안되서 write-up 따라했다. ㅡㅡ
 
-`p(printf_plt) + "BBBB" + p(binsh)`는 안되는데 `p(printf_plt) + p(binsh)`가 되는 이유를 모르겠다.
+`p(printf_plt) + "BBBB" + p(binsh)`는 안되는데
+`p(printf_plt) + p(binsh)`가 되는 이유를 모르겠다.
 
 스택 한 칸 비워야되는 걸로 알고 있는데...

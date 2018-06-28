@@ -76,9 +76,11 @@ Dump of assembler code for function l33tH4x0r:
    0x000000000040092e <+33>:    call   cx4007f0 <fopen&plt>
 ```
 
-`flag.txt`(0x400fca)를 여는 함수다. 그런데 이 함수를 호출하는 함수가 없다.
+`flag.txt`(0x400fca)를 여는 함수다.
+그런데 이 함수를 호출하는 함수가 없다.
 
-Enter your choice:에서 4919를 입력하면 pwnMe 함수가 실행되는데, pwnMe 함수를 보면
+Enter your choice:에서 4919를 입력하면 pwnMe 함수가 실행되는데,
+pwnMe 함수를 보면
 
 ```x86asm
 Dump of assembler code for function pwnMe:
@@ -102,7 +104,11 @@ Dump of assembler code for function pwnMe:
    0x0000000000400d1f <+62>:    call   0x400810 <exit@plt>
 ```
 
-pwnMe+35에서 eax는 동물의 종류를 고를 때의 숫자, pwnMe+55에서 rax는 동물의 이름의 헥사값을 가리킨다. 예를 들어 lion, tiger, bear순으로 각각 타입은 1, 2, 3, 이름은 AAA, BBB, CCC라고 이름을 지으면 메모리는 상황은 다음 스크린샷과 같다.
+pwnMe+35에서 eax는 동물의 종류를 고를 때의 숫자,
+pwnMe+55에서 rax는 동물의 이름의 헥사값을 가리킨다.
+
+예를 들어 lion, tiger, bear순으로 각각 타입은 1, 2, 3,
+이름은 AAA, BBB, CCC라고 이름을 지으면 메모리는 상황은 다음 스크린샷과 같다.
 
 ```x86asm
 (gdb) x/24x 0x603010
@@ -114,9 +120,13 @@ pwnMe+35에서 eax는 동물의 종류를 고를 때의 숫자, pwnMe+55에서 r
 0x603060:       0x00000000      0x00000003      0x00020fa1      0x00000000
 ```
 
-bear를 만드는 함수는 다른 동물을 만드는 함수와 달라서 이름이 들어갈 자리에 0xdeadbeef가 들어가니까 bear는 만들지 말고, 다른 동물을 만들어서 l33tH4x0r 함수 주소를 입력하면 실행시킬 수 있다.
+bear를 만드는 함수는 다른 동물을 만드는 함수와 달라서
+이름이 들어갈 자리에 0xdeadbeef가 들어가니까 bear는 만들지 말고,
+다른 동물을 만들어서 l33tH4x0r 함수 주소를 입력하면 실행시킬 수 있다.
 
-그런데 난 주소가 64비트인 걸 생각 안하고 \x0d\x09\x40\x00만 죽어라 입력하다가 못풀었다. 컴퓨터는 개행문자까지 포함해서 0x0a0040090d를 호출하려고 시도했던 것ㅠㅠ
+그런데 난 주소가 64비트인 걸 생각 안하고
+\x0d\x09\x40\x00만 죽어라 입력하다가 못풀었다.
+컴퓨터는 개행문자까지 포함해서 0x0a0040090d를 호출하려고 시도했던 것ㅠㅠ
 
 풀이
 

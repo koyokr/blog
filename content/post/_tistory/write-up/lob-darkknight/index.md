@@ -47,7 +47,9 @@ main(int argc, char *argv[])
 
 그래서 RTL을 쓰는데...
 
-ret 영역에는 system 함수 주소를 넣고, system 함수에 인자로 ebp+8이 될 곳에 "/bin/sh" 문자열의 주소를 넣으면 문제를 풀 수 있다.
+ret 영역에는 system 함수 주소를 넣고,
+system 함수에 인자로 ebp+8이 될 곳에 "/bin/sh" 문자열의 주소를 넣으면
+문제를 풀 수 있다.
 
 ```sh
 $ cp bugbear augbear
