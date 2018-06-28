@@ -10,15 +10,15 @@ markup: mmark
 
 배열에 대한 포인터 연산은 다음과 같은 어셈블리 코드로 구현된다.
 
-|Expression|Type|Value|Assembly code|
-|---|---|---|---|
-|E|int *|x|movl %rdx, %rax|
-|E[0]|int|M[x]|movl (%rdx), %eax|
-|E[i]|int|M[x + 4i]|movl (%rdx, %rcx, 4), %eax|
-|&E[2]|int *|x + 8|leaq 8(%rdx), %rax|
-|E + i - 1|int *|x + 4i - 4|leaq -4(%rdx, %rcx, 4), %rax|
-|*(E + i - 3)|int|M[x + 4i - 12]|movl -12(%rdx, %rcx, 4), %eax|
-|&E[i]-E|long|i|movq %rcx, %rax|
+| Expression   | Type  | Value          | Assembly code                 |
+| ------------ | ----- | -------------- | ----------------------------- |
+| E            | int * | x              | movl %rdx, %rax               |
+| E[0]         | int   | M[x]           | movl (%rdx), %eax             |
+| E[i]         | int   | M[x + 4i]      | movl (%rdx, %rcx, 4), %eax    |
+| &E[2]        | int * | x + 8          | leaq 8(%rdx), %rax            |
+| E + i - 1    | int * | x + 4i - 4     | leaq -4(%rdx, %rcx, 4), %rax  |
+| *(E + i - 3) | int   | M[x + 4i - 12] | movl -12(%rdx, %rcx, 4), %eax |
+| &E[i]-E      | long  | i              | movq %rcx, %rax               |
 
 ## 2. 다중 배열
 

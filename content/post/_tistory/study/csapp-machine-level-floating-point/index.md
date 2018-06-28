@@ -50,24 +50,24 @@ x86-64 코드를 실행할 수 있는 모든 프로세서들은 SSE2 이상을 �
 
 ## 1. AVX 레지스터
 
-|256bit|128bit||
-|---|---|---|
-|%ymm0|%xmm0|1st FP arg./Return value|
-|%ymm1|%xmm1|2nd FP argument|
-|%ymm2|%xmm2|3rd FP argument|
-|%ymm3|%xmm3|4th FP argument|
-|%ymm4|%xmm4|5th FP argument|
-|%ymm5|%xmm5|6th FP argument|
-|%ymm6|%xmm6|7th FP argument|
-|%ymm7|%xmm7|8th FP argument|
-|%ymm8|%xmm8|Caller saved|
-|%ymm9|%xmm9|Caller saved|
-|%ymm10|%xmm10|Caller saved|
-|%ymm11|%xmm11|Caller saved|
-|%ymm12|%xmm12|Caller saved|
-|%ymm13|%xmm13|Caller saved|
-|%ymm14|%xmm14|Caller saved|
-|%ymm15|%xmm15|Caller saved|
+| 256bit | 128bit |                          |
+| ------ | ------ | ------------------------ |
+| %ymm0  | %xmm0  | 1st FP arg./Return value |
+| %ymm1  | %xmm1  | 2nd FP argument          |
+| %ymm2  | %xmm2  | 3rd FP argument          |
+| %ymm3  | %xmm3  | 4th FP argument          |
+| %ymm4  | %xmm4  | 5th FP argument          |
+| %ymm5  | %xmm5  | 6th FP argument          |
+| %ymm6  | %xmm6  | 7th FP argument          |
+| %ymm7  | %xmm7  | 8th FP argument          |
+| %ymm8  | %xmm8  | Caller saved             |
+| %ymm9  | %xmm9  | Caller saved             |
+| %ymm10 | %xmm10 | Caller saved             |
+| %ymm11 | %xmm11 | Caller saved             |
+| %ymm12 | %xmm12 | Caller saved             |
+| %ymm13 | %xmm13 | Caller saved             |
+| %ymm14 | %xmm14 | Caller saved             |
+| %ymm15 | %xmm15 | Caller saved             |
 
 AVX512 레지스터인 ZMM은 안넣었다.
 
@@ -75,14 +75,14 @@ AVX512 레지스터인 ZMM은 안넣었다.
 
 이동 연산부터
 
-|Instruction|Source|Destination|Description|
-|---|---|---|---|
-|vmovss|M(32bit)|X|Move single precision|
-|vmovss|X|M(32bit)|Move single precision|
-|vmovsd|M(64bit)|X|Move double precision|
-|vmovsd|X|M(64bit)|Move double precision|
-|vmovaps|X|X|Move aligned, packed single precision|
-|vmovapd|X|X|Move aligned, packed double precision|
+| Instruction | Source   | Destination | Description                           |
+| ----------- | -------- | ----------- | ------------------------------------- |
+| vmovss      | M(32bit) | X           | Move single precision                 |
+| vmovss      | X        | M(32bit)    | Move single precision                 |
+| vmovsd      | M(64bit) | X           | Move double precision                 |
+| vmovsd      | X        | M(64bit)    | Move double precision                 |
+| vmovaps     | X        | X           | Move aligned, packed single precision |
+| vmovapd     | X        | X           | Move aligned, packed double precision |
 
 인스트럭션에서 문자 'a'는 aligned를 의미한다.
 주소가 16바이트 정렬 요건을 만족하지 못하면 예외가 발생한다.
@@ -121,23 +121,23 @@ float_mov:
 
 다음은 변환 연산.
 
-|Instruction|Source|Destination|Description|
-|---|---|---|---|
-|vcvttss2si|X/M(32bit)|R(32bit)|Convert with truncation single precision to integer|
-|vcvttsd2si|X/M(64bit)|R(32bit)|Convert with truncation double precision to integer|
-|vcvttss2siq|X/M(32bit)|R(64bit)|Convert with truncation single precision to quad word integer|
-|vcvttsd2siq|X/M(64bit)|R(64bit)|Convert with truncation double precision to quad word integer|
+| Instruction | Source     | Destination | Description                                                   |
+| ----------- | ---------- | ----------- | ------------------------------------------------------------- |
+| vcvttss2si  | X/M(32bit) | R(32bit)    | Convert with truncation single precision to integer           |
+| vcvttsd2si  | X/M(64bit) | R(32bit)    | Convert with truncation double precision to integer           |
+| vcvttss2siq | X/M(32bit) | R(64bit)    | Convert with truncation single precision to quad word integer |
+| vcvttsd2siq | X/M(64bit) | R(64bit)    | Convert with truncation double precision to quad word integer |
 
 xmm 레지스터나 메모리에서 읽은 부동소수점 값을 정수 레지스터로 변환한다.
 
 이때 값은 0의 방향으로 근사한다.
 
-|Instruction|Source 1|Source 2|Destination|Description|
-|---|---|---|---|---|
-|vcvtsi2ss|M(32bit)/R(32bit)|X|X|Convert integer to single precision|
-|vcvtsi2sd|M(32bit)/R(32bit)|X|X|Convert integer to double precision|
-|vcvtsi2ssq|M(64bit)/R(64bit)|X|X|Convert quad word integer to single precision|
-|vcvtsi2sdq|M(64bit)/R(64bit)|X|X|Convert quad word integer to double precision|
+| Instruction | Source 1          | Source 2 | Destination | Description                                   |
+| ----------- | ----------------- | -------- | ----------- | --------------------------------------------- |
+| vcvtsi2ss   | M(32bit)/R(32bit) | X        | X           | Convert integer to single precision           |
+| vcvtsi2sd   | M(32bit)/R(32bit) | X        | X           | Convert integer to double precision           |
+| vcvtsi2ssq  | M(64bit)/R(64bit) | X        | X           | Convert quad word integer to single precision |
+| vcvtsi2sdq  | M(64bit)/R(64bit) | X        | X           | Convert quad word integer to double precision |
 
 정수에서 부동소수점으로 변환하는 인스트럭션이다.
 
@@ -187,15 +187,15 @@ vxorps 인스트럭션은 나중에 다룬다.
 
 인스트럭션
 
-|Single|Double|Effect|Description|
-|---|---|---|---|
-|vaddss|vaddsd|D <\- S2 + S1|Floating-point add|
-|vsubss|vsubsd|D <\- S2 - S1|Floating-point subtract|
-|vmulss|vmulsd|D <\- S2 * S1|Floating-point multiply|
-|vdivss|vdivsd|D <\- S2 / S1|Floating-point divide|
-|vmaxss|vmaxsd|D <\- max(S2, S1)|Floating-point maximum|
-|vminss|vminsd|D <\- min(S2, S1)|Floating-point minimum|
-|sqrtss|sqrtsd|D <\- sqrt(S1)|Floating-point square root|
+| Single | Double | Effect            | Description                |
+| ------ | ------ | ----------------- | -------------------------- |
+| vaddss | vaddsd | D <\- S2 + S1     | Floating-point add         |
+| vsubss | vsubsd | D <\- S2 - S1     | Floating-point subtract    |
+| vmulss | vmulsd | D <\- S2 * S1     | Floating-point multiply    |
+| vdivss | vdivsd | D <\- S2 / S1     | Floating-point divide      |
+| vmaxss | vmaxsd | D <\- max(S2, S1) | Floating-point maximum     |
+| vminss | vminsd | D <\- min(S2, S1) | Floating-point minimum     |
+| sqrtss | sqrtsd | D <\- sqrt(S1)    | Floating-point square root |
 
 예제
 
@@ -256,10 +256,10 @@ cel2fahr:
 
 ## 5. 부동소수점 비트 연산
 
-|Single|Double|Effect|Description|
-|---|---|---|---|
-|vxorps|xorpd|D <\- S2 ^ S1|Bitwise EXCLUSIVE-OR|
-|vandps|andpd|D <\- S2 & S1|Bitwise EXCLUSIVE-OR|
+| Single | Double | Effect        | Description          |
+| ------ | ------ | ------------- | -------------------- |
+| vxorps | xorpd  | D <\- S2 ^ S1 | Bitwise EXCLUSIVE-OR |
+| vandps | andpd  | D <\- S2 & S1 | Bitwise EXCLUSIVE-OR |
 
 예제. 아래는 math.c 파일 내용.
 
@@ -307,23 +307,22 @@ vxorp 인스트럭션은 0을 생성하는데 많이 애용되나 보다.
 xor 인스트럭션처럼.
 
 ## 6. 부동소수점 비교 연산
-## 
 
-|Instruction|Based on|Description|
-|---|---|---|
-|ucomiss S1, S2|S2 - S1|Compare single precision|
-|ucomisd S1, S2|S2 - S1|Compare double precision|
+| Instruction    | Based on | Description              |
+| -------------- | -------- | ------------------------ |
+| ucomiss S1, S2 | S2 - S1  | Compare single precision |
+| ucomisd S1, S2 | S2 - S1  | Compare double precision |
 
 부동소수점 비교 인스트럭션도 CMP 인스트럭션처럼 조건 코드를 설정한다.
 
 조건 코드는 다음과 같은 규칙을 따라 설정된다.
 
-|Ordering S2:S1|CF|ZF|PF|
-|---|---|---|---|
-|Unordered|1|1|1|
-|S2 < S1|1|0|0|
-|S2 = S1|0|1|0|
-|S2 > S1|0|0|0|
+| Ordering S2:S1 | CF  | ZF  | PF  |
+| -------------- | --- | --- | --- |
+| Unordered      | 1   | 1   | 1   |
+| S2 < S1        | 1   | 0   | 0   |
+| S2 = S1        | 0   | 1   | 0   |
+| S2 > S1        | 0   | 0   | 0   |
 
 Unordered는 오퍼랜드 중 하나가 NaN일 때 발생하며, PF로 검출할 수 있다.
 

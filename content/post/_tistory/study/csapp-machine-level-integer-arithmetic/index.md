@@ -10,23 +10,23 @@ markup: mmark
 
 ## 1. 정수의 산술연산
 
-|Instruction|Effect|Description|
-|---|---|---|
-|leaq S, D|D <\- &S|Load effective address|
-|inc D|D <\- D + 1|Increment|
-|dec D|D <\- D - 1|Decrement|
-|neg D|D <\- -D|Negate|
-|not D|D <\- -D|Complement|
-|add S, D|D <\- D + S|Add|
-|sub S, D|D <\- D - S|Subtract|
-|imul S, D|D <\- D * S|Multiply|
-|xor S, D|D <\- D ^ S|Exclusive-or|
-|or S, D|D <\- D | S|Or|
-|and S, D|D <\- D & S|And|
-|sal k, D|D <\- D << k|Left shift|
-|shl k, D|D <\- D << k|Left shift (same as sal)|
-|sar k, D|D <\- D >>A k|Arithmetic right shift|
-|shr k, D|D <\- D >>L k|Logical right shift|
+| Instruction | Effect        | Description              |
+| ----------- | ------------- | ------------------------ |
+| leaq S, D   | D <\- &S      | Load effective address   |
+| inc D       | D <\- D + 1   | Increment                |
+| dec D       | D <\- D - 1   | Decrement                |
+| neg D       | D <\- -D      | Negate                   |
+| not D       | D <\- -D      | Complement               |
+| add S, D    | D <\- D + S   | Add                      |
+| sub S, D    | D <\- D - S   | Subtract                 |
+| imul S, D   | D <\- D * S   | Multiply                 |
+| xor S, D    | D <\- D ^ S   | Exclusive-or             |
+| or S, D     | D <\- D \| S  | Or                       |
+| and S, D    | D <\- D & S   | And                      |
+| sal k, D    | D <\- D << k  | Left shift               |
+| shl k, D    | D <\- D << k  | Left shift (same as sal) |
+| sar k, D    | D <\- D >>A k | Arithmetic right shift   |
+| shr k, D    | D <\- D >>L k | Logical right shift      |
 
 leaq(Load Effective Address, Quad word) 인스트럭션은
 movq 인스트럭션의 변형판이라고 보면 된다.
@@ -92,13 +92,13 @@ shift_left4_rightn:
 
 ## 2. 특수 산술연산
 
-|Instruction|Effect|Description|
-|---|---|---|
-|imulq S|R[%rdx]:R[%rax] <\- S * R[%rax]|Signed full multiply|
-|mulq S|R[%rdx]:R[%rax] <\- S * R[%rax]|Unsigned full multiply|
-|cqto|R[%rdx]:R[%rax] <\- SignExtend(R[%rax])|Convert to oct word|
-|idivq S|R[%rdx] <\- R[%rdx]:R[%rax] mod S;<br>R[%rdx] <\- R[%rdx]:R[%rax] / S;|Signed divide|
-|divq S|R[%rdx] <\- R[%rdx]:R[%rax] mod S;<br>R[%rdx] <\- R[%rdx]:R[%rax] / S;|Unsigned divide|
+| Instruction | Effect                                                                 | Description            |
+| ----------- | ---------------------------------------------------------------------- | ---------------------- |
+| imulq S     | R[%rdx]:R[%rax] <\- S * R[%rax]                                        | Signed full multiply   |
+| mulq S      | R[%rdx]:R[%rax] <\- S * R[%rax]                                        | Unsigned full multiply |
+| cqto        | R[%rdx]:R[%rax] <\- SignExtend(R[%rax])                                | Convert to oct word    |
+| idivq S     | R[%rdx] <\- R[%rdx]:R[%rax] mod S;<br>R[%rdx] <\- R[%rdx]:R[%rax] / S; | Signed divide          |
+| divq S      | R[%rdx] <\- R[%rdx]:R[%rax] mod S;<br>R[%rdx] <\- R[%rdx]:R[%rax] / S; | Unsigned divide        |
 
 64비트 정수형간 곱셈의 결과값 표시를 위해서는 128비트가 필요하다.
 참고로 128비트 워드는 oct word라고 불린다.

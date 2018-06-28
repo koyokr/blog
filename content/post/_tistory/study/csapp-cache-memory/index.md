@@ -34,19 +34,19 @@ markup: mmark
 
 아래 표를 정독하는 것도 좋다.
 
-|Parameter|Description|
-|---|---|
-|Fundamental parameter|
-|S = 2^s|Number of sets|
-|E|Number of lines per set|
-|B = 2^b|Block size (bytes)|
-|m = log_2(M)|Number of physical (main memory) address bits|
-|Derived parameter|
-|M = 2^m|Maximum number of unique memory addresses|
-|s = log_2(S)|Number of set index bits|
-|b = log_2(B)|Number of block offset bits|
-|t = m - (s + b)|Number of tag bits|
-|C = B \* E \* S|Cache size (bytes), not including overhead such as the vaild and tag bits|
+| Parameter             | Description                                                               |
+| --------------------- | ------------------------------------------------------------------------- |
+| Fundamental parameter |
+| S = 2^s               | Number of sets                                                            |
+| E                     | Number of lines per set                                                   |
+| B = 2^b               | Block size (bytes)                                                        |
+| m = log_2(M)          | Number of physical (main memory) address bits                             |
+| Derived parameter     |
+| M = 2^m               | Maximum number of unique memory addresses                                 |
+| s = log_2(S)          | Number of set index bits                                                  |
+| b = log_2(B)          | Number of block offset bits                                               |
+| t = m - (s + b)       | Number of tag bits                                                        |
+| C = B \* E \* S       | Cache size (bytes), not including overhead such as the vaild and tag bits |
 
 ## 3. Direct Mapped Cache (E = 1)
 

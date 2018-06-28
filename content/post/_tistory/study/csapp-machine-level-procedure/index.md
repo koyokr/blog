@@ -32,11 +32,11 @@ markup: mmark
 
 ## 1. 콜(Call), 리턴(Return)
 
-|Instruction|Description|
-|---|---|
-|call Label|Procedure call|
-|call *Operand|Procedure call|
-|ret|Return from call|
+| Instruction   | Description      |
+| ------------- | ---------------- |
+| call Label    | Procedure call   |
+| call *Operand | Procedure call   |
+| ret           | Return from call |
 
 call 인스트럭션은 두 가지 동작을 한다.
 call 인스트럭션의 다음 주소를 스택에 push하고
@@ -93,29 +93,29 @@ M1 - > M2 -> F1 -> F2 -> F3 -> L1 -> L2 -> L3 -> F4 -> M3
 M1의 인스트럭션이 실행될 때, 스택 포인터 %rsp가 0x7fffffffdd58이라고 가정하면
 다음과 같은 표를 작성할 수 있다.
 
-|Label|PC|Instruction|%rdi|%rsi|%rax|%rsp|*%rsp|
-|---|---|---|---|---|---|---|---|
-|M1|0x677|mov||||0x7fffffffdd58||
-|M2|0x67c|callq|10|||0x7fffffffdd58||
-|F1|0x668|lea|10|||0x7fffffffdd50|0x681|
-|F2|0x66c|sub|10|11||0x7fffffffdd50|0x681|
-|F3|0x670|callq|9|11||0x7fffffffdd50|0x681|
-|L1|0x660|mov|9|11||0x7fffffffdd48|0x675|
-|L2|0x663|imul|9|11|9|0x7fffffffdd48|0x675|
-|L3|0x667|retq|9|11|99|0x7fffffffdd48|0x675|
-|F4|0x675|repz retq|9|11|99|0x7fffffffdd50|0x681|
-|M3|0x681|repz retq|9|11|99|0x7fffffffdd58||
+| Label | PC    | Instruction | %rdi           | %rsi           | %rax           | %rsp           | *%rsp |
+| ----- | ----- | ----------- | -------------- | -------------- | -------------- | -------------- | ----- |
+| M1    | 0x677 | mov         | 0x7fffffffdd58 |
+| M2    | 0x67c | callq       | 10             | 0x7fffffffdd58 |
+| F1    | 0x668 | lea         | 10             | 0x7fffffffdd50 | 0x681          |
+| F2    | 0x66c | sub         | 10             | 11             | 0x7fffffffdd50 | 0x681          |
+| F3    | 0x670 | callq       | 9              | 11             | 0x7fffffffdd50 | 0x681          |
+| L1    | 0x660 | mov         | 9              | 11             | 0x7fffffffdd48 | 0x675          |
+| L2    | 0x663 | imul        | 9              | 11             | 9              | 0x7fffffffdd48 | 0x675 |
+| L3    | 0x667 | retq        | 9              | 11             | 99             | 0x7fffffffdd48 | 0x675 |
+| F4    | 0x675 | repz retq   | 9              | 11             | 99             | 0x7fffffffdd50 | 0x681 |
+| M3    | 0x681 | repz retq   | 9              | 11             | 99             | 0x7fffffffdd58 |
 
 ## 2. 데이터 전달
 
 x86-64에서는 최대 여섯 개의 정수형 인자를 레지스터로 전달할 수 있다.
 
-|bits|1st|2nd|3rd|4th|5th|6th|
-|---|---|---|---|---|---|---|
-|64|%rdi|%rsi|%rdx|%rcx|%r8|%r9|
-|32|%edi|%esi|%edx|%ecx|%r8d|%r9d|
-|16|%di|%si|%dx|%cx|%r8w|%r9w|
-|8|%dil|%sil|%dl|%cl|%r8b|%r9b|
+| bits | 1st  | 2nd  | 3rd  | 4th  | 5th  | 6th  |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 64   | %rdi | %rsi | %rdx | %rcx | %r8  | %r9  |
+| 32   | %edi | %esi | %edx | %ecx | %r8d | %r9d |
+| 16   | %di  | %si  | %dx  | %cx  | %r8w | %r9w |
+| 8    | %dil | %sil | %dl  | %cl  | %r8b | %r9b |
 
 이름 진짜 일관성 없다;;
 

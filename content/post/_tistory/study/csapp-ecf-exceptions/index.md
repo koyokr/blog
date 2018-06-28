@@ -14,9 +14,8 @@ $$
 a_0, a_1, ..., a_{n-1}
 $$
 
-인스트럭션 $$I_k$$에 대응되는 주소가 $$a_k$$다.
-$$a_k$$에서 $$a_{k+1}$$로의 전환을 '제어이동'이라고 하며,
-이러한 제어이동의 배열은 제어흐름(control flow)이라고 부른다.
+인스트럭션 $$I_k$$에 대응되는 주소가 $$a_k$$다. $$a_k$$에서 $$a_{k+1}$$로의 전환을
+'제어이동'이라고 하며, 이러한 제어이동의 배열은 제어흐름(control flow)이라고 부른다.
 
 보통의 제어흐름에서 $$I_k, I_{k+1}$$는 메모리상에서 나란히 존재한다.
 `jmp`, `call`, `ret` 같은 인스트럭션에 의해 $$I_k$$가 $$I_{k+1}$$와 인접하지 않는 경우가 있을 수 있다.
@@ -79,7 +78,8 @@ $$a_k$$에서 $$a_{k+1}$$로의 전환을 '제어이동'이라고 하며,
 
 후자는 시스템 콜, 외부 I/O 디바이스에서 온 시그널이 있다.
 
-시스템 부팅 시, 운영체제는 예외 테이블을 할당하고 초기화해서 엔트리 k는 예외상황 k에 대한 핸들러의 주소를 갖는다.
+시스템 부팅 시, 운영체제는 예외 테이블을 할당하고 초기화해서
+엔트리 k는 예외상황 k에 대한 핸들러의 주소를 갖는다.
 
 런타임에 프로세서는 이벤트 발생을 감지하고, 대응하는 예외번호 k를 결정한다.
 그리고 프로세서는 예외 테이블의 엔트리 k를 통해 간접 프로시저 콜을 해, 예외상황을 발생시킨다.
@@ -100,12 +100,12 @@ $$a_k$$에서 $$a_{k+1}$$로의 전환을 '제어이동'이라고 하며,
 
 예외 상황은 네 가지 종류로 구분할 수 있다. 다음 표를 보자.
 
-|Class|Cause|Async/Sync|Return behavior|
-|---|---|---|---|
-|Interrupt|Signal from I/O device|Async|Always returns to next instruction|
-|Trap|Intentional exception|Sync|Always returns to next instruction|
-|Fault|Potentially recoverable error|Sync|Might return to current instruction|
-|Abort|Nonrecoverable error|Sync|Never returns|
+| Class     | Cause                         | Async/Sync | Return behavior                     |
+| --------- | ----------------------------- | ---------- | ----------------------------------- |
+| Interrupt | Signal from I/O device        | Async      | Always returns to next instruction  |
+| Trap      | Intentional exception         | Sync       | Always returns to next instruction  |
+| Fault     | Potentially recoverable error | Sync       | Might return to current instruction |
+| Abort     | Nonrecoverable error          | Sync       | Never returns                       |
 
 비동기(async) 예외는 외부의 입출력 디바이스 내 이벤트로 발생한다.
 동기(sync) 예외는 인스트럭션을 실행한 결과로 발생한다.
@@ -173,13 +173,13 @@ abort 핸들러는 절대로 응용 프로그램으로 제어를 리턴하지 �
 
 책에 있는 x86-64 시스템에서 정의된 일부 예외를 살펴보자.
 
-|Exception number|Description|Exception class|
-|---|---|---|
-|0|Divide error|Fault|
-|13|General protection fault|Fault|
-|14|Page fault|Fault|
-|18|Machine check|Abort|
-|32-255|OS-defined exceptions|Interrupt or trap|
+| Exception number | Description              | Exception class   |
+| ---------------- | ------------------------ | ----------------- |
+| 0                | Divide error             | Fault             |
+| 13               | General protection fault | Fault             |
+| 14               | Page fault               | Fault             |
+| 18               | Machine check            | Abort             |
+| 32-255           | OS-defined exceptions    | Interrupt or trap |
 
 32부터 255에 해당하는 예외를 운영체제가 직접 정의할 수 있다는 것이 신기하다.
 

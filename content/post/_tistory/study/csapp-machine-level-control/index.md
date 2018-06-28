@@ -46,18 +46,18 @@ INC와 DEC는 OF와 ZF를 설정하지만, CF에는 영향을 주지 않는다.
 
 다른 레지스터는 변경시키지 않고 조건 코드만 변경시키는 인스트럭션 클래스가 있다.
 
-|Instruction|Based on|Description|
-|---|---|---|
-|CMP S1, S2|S2 - S1|Compare|
-|cmpb||Compare byte|
-|cmpw||Compare word|
-|cmpl||Compare double word|
-|cmpq||Compare quad word|
-|TEST S1, S2|S1  & S2|Test|
-|testb||Test byte|
-|testw||Test word|
-|testl||Test double word|
-|testq||Test quad|
+| Instruction | Based on            | Description |
+| ----------- | ------------------- | ----------- |
+| CMP S1, S2  | S2 - S1             | Compare     |
+| cmpb        | Compare byte        |
+| cmpw        | Compare word        |
+| cmpl        | Compare double word |
+| cmpq        | Compare quad word   |
+| TEST S1, S2 | S1  & S2            | Test        |
+| testb       | Test byte           |
+| testw       | Test word           |
+| testl       | Test double word    |
+| testq       | Test quad           |
 
 CMP는 레지스터에 영향을 주지 않는단 차이를 제외하면 SUB 인스트럭션과 동일하다.
 
@@ -71,20 +71,20 @@ CMP는 레지스터에 영향을 주지 않는단 차이를 제외하면 SUB 인
 
 SET 인스트럭션을 이용한다.
 
-|Instruction|Synonym|Effect|Set condition|
-|---|---|---|---|
-|sete D|setz|D <\- ZF|Equal / zero|
-|setne D|setnz|D <\- ~ZF|Not equal / not zero|
-|sets D||D <\- SF|Negative|
-|setns D|||D <\- ~SF|Nonnegative|
-|setg D|setnle|D <\- ~(SF^OF) & ~ZF|Greater (signed >)|
-|setge D|setnl|D <\- ~(SF^OF)|Greater or equal (signed >=)|
-|setl D|setnge|D <\- SF^OF|Less (signed <)|
-|setle D|setng|D <\- (SF^OF) | ZF|Less or equal (signed <=)|
-|seta D|setnbe|D <\- ~CF & ~ZF|Above (unsigned >)|
-|setae D|setnb|D <\- ~CF|Above or equal (unsigned >=)|
-|setb D|setnae|D <\- CF|Below (unsigned <)|
-|setbe D|setna|D <\- CF | ZF|Below or equal (unsigned <=)|
+| Instruction | Synonym   | Effect               | Set condition                |
+| ----------- | --------- | -------------------- | ---------------------------- |
+| sete D      | setz      | D <\- ZF             | Equal / zero                 |
+| setne D     | setnz     | D <\- ~ZF            | Not equal / not zero         |
+| sets D      | D <\- SF  | Negative             |
+| setns D     | D <\- ~SF | Nonnegative          |
+| setg D      | setnle    | D <\- ~(SF^OF) & ~ZF | Greater (signed >)           |
+| setge D     | setnl     | D <\- ~(SF^OF)       | Greater or equal (signed >=) |
+| setl D      | setnge    | D <\- SF^OF          | Less (signed <)              |
+| setle D     | setng     | D <\- (SF^OF) \| ZF  | Less or equal (signed <=)    |
+| seta D      | setnbe    | D <\- ~CF & ~ZF      | Above (unsigned >)           |
+| setae D     | setnb     | D <\- ~CF            | Above or equal (unsigned >=) |
+| setb D      | setnae    | D <\- CF             | Below (unsigned <)           |
+| setbe D     | setna     | D <\- CF \| ZF       | Below or equal (unsigned <=) |
 
 여기서 l과 b는 각각 less와 below를 뜻한다.
 long word나 byte로 헷갈리지 말자.
@@ -115,22 +115,22 @@ comp:
 JMP 인스트럭션을 사용하여 조건에 따라(필요하다면 조건 없이)
 프로그램의 다른 부분으로 이동할 수 있다.
 
-|Instruction|Synonym|Jump condition|Description|
-|---|---|---|---|
-|jmp Label||ZF|Direct jump|
-|jmp *Operand||ZF|Equal / zero|
-|je Label|jz|ZF|Equal / zero|
-|jne Label|jnz|~ZF|Not equal / not zero|
-|js Label||SF|Negative|
-|jns Label||~SF|Nonnegative|
-|jg Label|jnle|~(SF ^ OF) & ~ZF|Greater (signed >)|
-|jge Label|jnl|~(SF ^ OF)|Greater or equal (signed >=)|
-|jl Label|jnge|SF ^ OF|Less (signed <)|
-|jle Label|jng|(SF ^ OF) | ZF|Less or equal (signed <=)|
-|ja Label|jnbe|~CF & ~ZF|Above (unsigned >)|
-|jae Label|jnb|~CF|Above or equal (unsigned >=)|
-|jb Label|jnae|CF|Below (unsigned <)|
-|jbe Label|jna|CF | ZF|Below or equal (unsigned <=)|
+| Instruction  | Synonym | Jump condition   | Description                  |
+| ------------ | ------- | ---------------- | ---------------------------- |
+| jmp Label    | ZF      | Direct jump      |
+| jmp *Operand | ZF      | Equal / zero     |
+| je Label     | jz      | ZF               | Equal / zero                 |
+| jne Label    | jnz     | ~ZF              | Not equal / not zero         |
+| js Label     | SF      | Negative         |
+| jns Label    | ~SF     | Nonnegative      |
+| jg Label     | jnle    | ~(SF ^ OF) & ~ZF | Greater (signed >)           |
+| jge Label    | jnl     | ~(SF ^ OF)       | Greater or equal (signed >=) |
+| jl Label     | jnge    | SF ^ OF          | Less (signed <)              |
+| jle Label    | jng     | (SF ^ OF) \| ZF  | Less or equal (signed <=)    |
+| ja Label     | jnbe    | ~CF & ~ZF        | Above (unsigned >)           |
+| jae Label    | jnb     | ~CF              | Above or equal (unsigned >=) |
+| jb Label     | jnae    | CF               | Below (unsigned <)           |
+| jbe Label    | jna     | CF \| ZF         | Below or equal (unsigned <=) |
 
 조건부 JMP 인스트럭션은 Direct jump만 가능하다.
 
@@ -251,20 +251,20 @@ done:
 
 CMOV(조건부 mov) 인스트럭션에 대해 알아보자.
 
-|Instruction|Synonym|Move condition|Description|
-|---|---|---|---|
-|cmove S, R|cmovz|ZF|Equal / zero|
-|cmovne S, R|cmovnz|~ZF|Not equal / not zero|
-|cmovs S, R||SF|Negative|
-|cmovns S, R||~SF|Nonnegative|
-|cmovg S, R|cmovnle|~(SF ^ OF) & ~ZF|Greater (signed >)|
-|cmovge S, R|cmovnl|~(SF ^ OF)|Greater or equal (signed >=)|
-|cmovl S, R|cmovnge|SF ^ OF|Less (signed <)|
-|cmovle S, R|cmovng|(SF ^ OF) | ZF|Less or equal (signed <=)|
-|cmova S, R|cmovnbe|~CF & ~ZF|Above (unsigned >)|
-|cmovae S, R|cmovnb|~CF|Above or equal (unsigned >=)|
-|cmovb S, R|cmovnae|CF|Below (unsigned <)|
-|cmovbe S, R|cmovna|CF | ZF|Below or equal (unsigned <=)|
+| Instruction | Synonym | Move condition   | Description                  |
+| ----------- | ------- | ---------------- | ---------------------------- |
+| cmove S, R  | cmovz   | ZF               | Equal / zero                 |
+| cmovne S, R | cmovnz  | ~ZF              | Not equal / not zero         |
+| cmovs S, R  | SF      | Negative         |
+| cmovns S, R | ~SF     | Nonnegative      |
+| cmovg S, R  | cmovnle | ~(SF ^ OF) & ~ZF | Greater (signed >)           |
+| cmovge S, R | cmovnl  | ~(SF ^ OF)       | Greater or equal (signed >=) |
+| cmovl S, R  | cmovnge | SF ^ OF          | Less (signed <)              |
+| cmovle S, R | cmovng  | (SF ^ OF) \| ZF  | Less or equal (signed <=)    |
+| cmova S, R  | cmovnbe | ~CF & ~ZF        | Above (unsigned >)           |
+| cmovae S, R | cmovnb  | ~CF              | Above or equal (unsigned >=) |
+| cmovb S, R  | cmovnae | CF               | Below (unsigned <)           |
+| cmovbe S, R | cmovna  | CF \| ZF         | Below or equal (unsigned <=) |
 
 이 인스트럭션들은 조건을 만족하면 값 S를 목적지 R에 복사한다.
 

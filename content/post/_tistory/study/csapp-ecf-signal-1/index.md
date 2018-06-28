@@ -15,27 +15,27 @@ Signal!
 
 POSIX.1-1990 표준에 있는 시그널 (리눅스 x86 기준)
 
-|Signal|Value|Action|Comment|
-|---|---|---|---|
-|SIGHUP|1|Terminate|Terminal line hangup|
-|SIGINT|2|Terminate|Interrupt from keyboard|
-|SIGQUIT|3|Terminate and dump core (책은 Terminate)|Quit from keyboard|
-|SIGILL|4|Terminate and dump core (책은 Terminate)|Illegal instruction|
-|SIGABRT|6|Terminate and dump core|Abort signal from abort function|
-|SIGFPE|8|Terminate and dump core|Floating point exception|
-|SIGKILL|9|Terminate|Kill signal|
-|SIGSEGV|11|Terminate and dump core|Invalid memory reference|
-|SIGPIPE|13|Terminate|Broken pipe: write to pipe with no readers|
-|SIGALRM|14|Terminate|Timer signal from alarm function|
-|SIGTERM|15|Terminate|Termination signal|
-|SIGUSR1|10|Terminate|User-defined signal 1|
-|SIGUSR2|12|Terminate|User-defined signal 2|
-|SIGCHLD|17|Ignore|Child stopped or terminated|
-|SIGCONT|18|Continue if currently stopped (책은 Ignore)|Continue if stopped|
-|SIGSTOP|19|Stop|Stop process|
-|SIGTSTP|20|Stop|Stop typed at terminal|
-|SIGTTIN|21|Stop|Terminal input for background process|
-|SIGTTOU|22|Stop|Terminal output for background process|
+| Signal  | Value | Action                                       | Comment                                    |
+| ------- | ----- | -------------------------------------------- | ------------------------------------------ |
+| SIGHUP  | 1     | Terminate                                    | Terminal line hangup                       |
+| SIGINT  | 2     | Terminate                                    | Interrupt from keyboard                    |
+| SIGQUIT | 3     | Terminate and dump core (Book: Terminate)    | Quit from keyboard                         |
+| SIGILL  | 4     | Terminate and dump core (Book: Terminate)    | Illegal instruction                        |
+| SIGABRT | 6     | Terminate and dump core                      | Abort signal from abort function           |
+| SIGFPE  | 8     | Terminate and dump core                      | Floating point exception                   |
+| SIGKILL | 9     | Terminate                                    | Kill signal                                |
+| SIGSEGV | 11    | Terminate and dump core                      | Invalid memory reference                   |
+| SIGPIPE | 13    | Terminate                                    | Broken pipe: write to pipe with no readers |
+| SIGALRM | 14    | Terminate                                    | Timer signal from alarm function           |
+| SIGTERM | 15    | Terminate                                    | Termination signal                         |
+| SIGUSR1 | 10    | Terminate                                    | User-defined signal 1                      |
+| SIGUSR2 | 12    | Terminate                                    | User-defined signal 2                      |
+| SIGCHLD | 17    | Ignore                                       | Child stopped or terminated                |
+| SIGCONT | 18    | Continue if currently stopped (Book: Ignore) | Continue if stopped                        |
+| SIGSTOP | 19    | Stop                                         | Stop process                               |
+| SIGTSTP | 20    | Stop                                         | Stop typed at terminal                     |
+| SIGTTIN | 21    | Stop                                         | Terminal input for background process      |
+| SIGTTOU | 22    | Stop                                         | Terminal output for background process     |
 
 SIGKILL과 SIGSTOP은 획득하거나(caught) 블럭되거나(blocked) 무시될(ignored) 수 없다.
 
@@ -43,27 +43,27 @@ core는 코드와 데이터 이미지를 디스크에 기록하는 것을 의미
 
 SUSv2와 POSIX.1-2001에 추가된 시그널. (리눅스 x86 기준. SIGPOLL 생략)
 
-|Signal|Value|Action|Comment|
-|---|---|---|---|
-|SIGBUS|7|Terminate and dump core (Linux 2.2까지 Terminate)|Bus error (bad memory access)|
-|SIGPROF|27|Terminate|Profiling timer expired|
-|SIGSYS|31|Terminate and dump core (Linux 2.2까지 Terminate)|Bad argument to routine|
-|SIGTRAP|5|Terminate and dump core|Trace/breakpoint trap|
-|SIGURG|23|Ignore|Urgent condition on socket|
-|SIGVTALRM|26|Terminate|Virtual alarm clock|
-|SIGXCPU|24|Terminate and dump core (Linux 2.2까지 Terminate)|CPU time limit exceeded|
-|SIGXFSZ|25|Terminate and dump core (Linux 2.2까지 Terminate)|File size limit exceeded|
+| Signal    | Value | Action                                               | Comment                       |
+| --------- | ----- | ---------------------------------------------------- | ----------------------------- |
+| SIGBUS    | 7     | Terminate and dump core (until Linux 2.2: Terminate) | Bus error (bad memory access) |
+| SIGPROF   | 27    | Terminate                                            | Profiling timer expired       |
+| SIGSYS    | 31    | Terminate and dump core (until Linux 2.2: Terminate) | Bad argument to routine       |
+| SIGTRAP   | 5     | Terminate and dump core                              | Trace/breakpoint trap         |
+| SIGURG    | 23    | Ignore                                               | Urgent condition on socket    |
+| SIGVTALRM | 26    | Terminate                                            | Virtual alarm clock           |
+| SIGXCPU   | 24    | Terminate and dump core (until Linux 2.2: Terminate) | CPU time limit exceeded       |
+| SIGXFSZ   | 25    | Terminate and dump core (until Linux 2.2: Terminate) | File size limit exceeded      |
 
 그밖에 다양한 시그널. (리눅스 x86 기준. SIGEMT, SIGCLD, SIGINFO, SIGLOST 생략)
 
-|Signal|Value|Action|Comment|
-|---|---|---|---|
-|SIGIOT|6|Terminate and dump core|IOT trap. A synonym for SIGABRT|
-|SIGSTKFLT|16|Terminate|Stack fault on coprocessor (unused)|
-|SIGIO|29|Terminate|I/O now possible|
-|SIGPWR|30|Terminate|Power failure|
-|SIGWINCH|28|Ignore|Window resize signal|
-|SIGUNUSED|31|Terminate|Synonymous with SIGSYS|
+| Signal    | Value | Action                  | Comment                             |
+| --------- | ----- | ----------------------- | ----------------------------------- |
+| SIGIOT    | 6     | Terminate and dump core | IOT trap. A synonym for SIGABRT     |
+| SIGSTKFLT | 16    | Terminate               | Stack fault on coprocessor (unused) |
+| SIGIO     | 29    | Terminate               | I/O now possible                    |
+| SIGPWR    | 30    | Terminate               | Power failure                       |
+| SIGWINCH  | 28    | Ignore                  | Window resize signal                |
+| SIGUNUSED | 31    | Terminate               | Synonymous with SIGSYS              |
 
 어떤 시그널은 특정 종류의 시스템 이벤트에 대응된다.
 
@@ -78,7 +78,7 @@ SUSv2와 POSIX.1-2001에 추가된 시그널. (리눅스 x86 기준. SIGPOLL 생
 
 시그널을 목적지 프로세스로 전달하는 것은 두단계로 이루어진다.
 
-### (1) 시그널 전송 (Sending Signals):
+### (1) 시그널 전송 (Sending Signals)
 
 커널은 프로세스의 컨텍스트(context) 내에 있는 일부 상태를 갱신해서
 시그널을 목적지 프로세스로 보낸다.
@@ -88,7 +88,7 @@ SUSv2와 POSIX.1-2001에 추가된 시그널. (리눅스 x86 기준. SIGPOLL 생
 1. 0으로 나누기나 자식 프로세스의 종료 같은 시스템 이벤트.
 2. 어떤 프로세스가 커널에 명시적으로 시그널을 목적 프로세스에 보낼 것을 요구하기 위해 kill 함수 호출.
 
-### (2) 시그널 수신 (Receiving Signals):
+### (2) 시그널 수신 (Receiving Signals)
 
 ![Receiving signal](receiving-signal.png)
 
@@ -165,9 +165,10 @@ int kill(pid_t pid, int sig);
 // 0 if OK, -1 on error
 ```
 
-pid 인자가 0이면 kill 함수는 호출한 프로세스가 속한 프로세스 그룹의 모든 프로세스에
-시그널 sig를 보낸다. pid 인자가 0보다 작으면 kill 함수는
-프로세스 그룹 |pid|의 모든 프로세스로 보낸다.
+pid 인자가 0이면 kill 함수는 호출한 프로세스가 속한 프로세스 그룹의
+모든 프로세스에 시그널 sig를 보낸다.
+pid 인자가 0보다 작으면 kill 함수는프로세스 그룹 |pid|의
+모든 프로세스로 보낸다.
 
 다음은 kill 함수의 예제다.
 
