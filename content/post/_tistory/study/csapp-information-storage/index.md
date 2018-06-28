@@ -18,9 +18,11 @@ markup: mmark
 
 ### 2.1.3 주소지정과 바이트 순서
 
-어떤 객체를 나타내는 바이트를 정렬하는 데는 두 가지 관습이 있다. Little endian과 Big endian.
+어떤 객체를 나타내는 바이트를 정렬하는 데는 두 가지 관습이 있다.
+Little endian과 Big endian.
 
-Big endian은 most significant bit를 가장 먼저 저장한다. Little endian은 그 반대다.
+Big endian은 most significant bit를 가장 먼저 저장한다.
+Little endian은 그 반대다.
 
 값 0x01234567이 주소상에 있다고 가정하면 둘은 각각 아래와 같이 저장된다.
 
@@ -30,7 +32,8 @@ Big endian: 0x01 0x23 0x45 0x67
 Little endian: 0x67 0x45 0x23 0x01
 ```
 
-네트워크는 바이트 순서가 표준으로 정해졌다. 그러므로 통신할 때는 이에 맞춰 바이트 순서를 조정할 필요가 있다.
+네트워크는 바이트 순서가 표준으로 정해졌다.
+그러므로 통신할 때는 이에 맞춰 바이트 순서를 조정할 필요가 있다.
 
 ### 2.1.4 스트링 표시
 

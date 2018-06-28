@@ -10,7 +10,8 @@ markup: mmark
 
 ## 1. 컴파일러 드라이버
 
-gcc와 같은 컴파일러 드라이버(Compiler driver)는 필요에 따라 전처리기, 컴파일러, 어셈블러, 링커를 호출한다.
+gcc와 같은 컴파일러 드라이버(Compiler driver)는 필요에 따라
+전처리기, 컴파일러, 어셈블러, 링커를 호출한다.
 
 main.c
 

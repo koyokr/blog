@@ -6,7 +6,8 @@ categories: [development]
 markup: mmark
 ---
 
-이 글은 notepad++에서 cl.exe를 이용해서 c언어를 컴파일하는 방법을 적는다. 왜 적냐면 나중에 보려고ㅎ
+이 글은 notepad++에서 cl.exe를 이용해서 c언어를 컴파일하는 방법을 적는다.
+왜 적냐면 나중에 보려고ㅎ
 
 비주얼 스튜디오 2015를 설치하면 똑같이 따라할 수 있다.
 
@@ -20,11 +21,12 @@ markup: mmark
 
 ![Edit environment variable](edit-environment-variable.png)
 
-시스템 환경 변수 Path에 cl.exe의 경로를 등록해서 아무데서나 cl을 실행할 수 있도록 해보자. cl.exe는 `VC\bin`에 위치하고 32비트용이다.  아래 두 경로를 입력하면 된다.  잘 모르겠어서 추가했는데 `Common7\IDE`는 생략해도 될 듯.
+시스템 환경 변수 Path에 cl.exe의 경로를 등록해서 아무데서나 cl을 실행할 수 있도록 해보자.
+cl.exe는 `VC\bin`에 위치하고 32비트용이다.
+아래 경로를 입력하면 된다.
 
 ```text
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin
-C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE
 ```
 
 아래와 같은 내용으로 `test.c`를 만들어서 컴파일을 테스트해보자.
@@ -40,7 +42,7 @@ int main(int argc, char *argv[]) {
 
 ![cl test.c in command prompt 1](cl-test-c-in-command-prompt-1.png)
 
-컴파일이 안된다.  
+컴파일이 안된다.\
 헤더 파일이나 라이브러리 파일들의 경로도 환경 변수에 등록해야 정상적으로 컴파일 할 수 있다.
 
 ## 2. 환경변수에 INCLUDE, LIB, LIBPATH 추가
@@ -49,12 +51,18 @@ int main(int argc, char *argv[]) {
 
 ![ADD INCLUDE, LIB, LIBPATH.png](add-include-lib-libpath.png)
 
-개발자 명령 프롬프트를 다시 실행해서 `SET INCLUDE`, `SET LIB`을 입력하고, `INCLUDE`, `LIB`, `LIBPATH`에 해당하는 환경변수 값을 복사해서 내 시스템 환경변수에 추가한다.  
+개발자 명령 프롬프트를 다시 실행해서 `SET INCLUDE`, `SET LIB`을 입력하고,
+`INCLUDE`, `LIB`, `LIBPATH`에 해당하는 환경변수 값을 복사해서 내 시스템 환경변수에 추가한다.
+
 참고로 환경변수를 수정했다면 명령 프롬프트 창도 껐다 켜야 수정된 환경변수가 적용된 채로 사용할 수 있다.
 
 ![VS2015 x64 Native Tools Command Prompt](vs2015-x64-native-tools-command-prompt.png)
 
-아마 기본적으로 x86 라이브러리를 환경변수에 등록하게 되는데, 만약 x64 네이티브 환경으로 만들고 싶다면 x64 네이티브 도구 명령 프롬프트에서 `SET INCLUDE`, `SET LIB`을 치고 새로 환경 변수를 입력해야 한다. 그리고 위에서 환경변수에 등록한 cl.exe의 경로도 x64용으로 변경해야 한다.
+아마 기본적으로 x86 라이브러리를 환경변수에 등록하게 되는데,
+만약 x64 네이티브 환경으로 만들고 싶다면 x64 네이티브 도구 명령 프롬프트에서
+`SET INCLUDE`, `SET LIB`을 치고 새로 환경 변수를 입력해야 한다.
+
+그리고 위에서 환경변수에 등록한 cl.exe의 경로도 x64용으로 변경해야 한다.
 
 ![cl test.c in command prompt 2](cl-test-c-in-command-prompt-2.png)
 
@@ -81,7 +89,8 @@ int main(int argc, char *argv[]) {
 
 ![Convert utf-8 to utf-8-bom 2](convert-utf-8-to-utf-8-bom-2.png)
 
-UTF-8 (BOM 없음)으로 되어있는데 BOM을 포함하는 UTF-8로 변환하고, 설정에서 새 문서의 인코딩을 UTF-8로 바꿔주자.
+UTF-8 (BOM 없음)으로 되어있는데 BOM을 포함하는 UTF-8로 변환하고,
+설정에서 새 문서의 인코딩을 UTF-8로 바꿔주자.
 
 ![cl test.c in command prompt 3](cl-test-c-in-command-prompt-4.png)
 
@@ -95,7 +104,8 @@ UTF-8 (BOM 없음)으로 되어있는데 BOM을 포함하는 UTF-8로 변환하�
 
 ![NppExec in Plugin Manager](nppexec-in-plugin-manager.png)
 
-이미 설치했기 때문에 Installed 탭을 찍어서 올렸는데, Available 탭에서 NppExec를 찾고 설치하면 된다.
+이미 설치했기 때문에 Installed 탭을 찍어서 올렸는데,
+Available 탭에서 NppExec를 찾고 설치하면 된다.
 
 ![NppExec > Execute 1](nppexec-execute-1.png)
 
@@ -107,12 +117,14 @@ UTF-8 (BOM 없음)으로 되어있는데 BOM을 포함하는 UTF-8로 변환하�
 cl /FAs "$(FULL_CURRENT_PATH)" /link /debug /opt:icf,ref
 ```
 
-나는 위와 같이 입력해서 사용하기로 했다. 옵션들을 간단하게 설명하면
+나는 위와 같이 입력해서 사용하기로 했다.
 
-`/FAs` : asm 확장자로 된 어셈블리어 파일을 만들겠다. 리버싱 공부할 때 편할듯ㅎ, ml 명령어 치고 link 명령어 쳐서 exe 파일도 만들 수 있다.  
-`/link` : 링크를 하겠다.  
-`/debug` : 디버그 정보를 넣겠다.  
-`/opt:icf,ref` : 이 옵션을 넣어줘야 프로그램을 올리디버거로 디스어셈블했을 때 편하게 볼 수 있다.
+옵션들을 간단하게 설명하면
+
+* `/FAs` : asm 확장자로 된 어셈블리어 파일을 만들겠다. 리버싱 공부할 때 편할듯ㅎ, ml 명령어 치고 link 명령어 쳐서 exe 파일도 만들 수 있다.
+* `/link` : 링크를 하겠다.
+* `/debug` : 디버그 정보를 넣겠다.
+* `/opt:icf,ref` : 이 옵션을 넣어줘야 프로그램을 올리디버거로 디스어셈블했을 때 편하게 볼 수 있다.
 
 Execute에 넣을 명령어가 완성됐다면 코드 작성 후에 들어가서 OK 버튼 눌러주자.
 

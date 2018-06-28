@@ -14,11 +14,13 @@ markup: mmark
 
 둘이 헷갈린다. O_ASYNC는 설명을 봐도 잘 모르겠어서 나중에 보기로 했음
 
-O_SYNC 모드 설정해주면 디스크에 버퍼 바로바로 넘어간다. fsync() 함수로 해줄거면 쓰지 말고
+O_SYNC 모드 설정해주면 디스크에 버퍼 바로바로 넘어간다.
+fsync() 함수로 해줄거면 쓰지 말고
 
 ### (2) O_CLOEXEC
 
-코드에서 외부 프로그램 실행할 때 파일 디스크립터 닫아준다. 안닫아주면 상속되나? 궁금
+코드에서 외부 프로그램 실행할 때 파일 디스크립터 닫아준다.
+안닫아주면 상속되나? 궁금
 
 ### (3) O_EXCL
 
@@ -26,7 +28,8 @@ O_SYNC 모드 설정해주면 디스크에 버퍼 바로바로 넘어간다. fsy
 
 ### (4) O_NONBLOCK
 
-read 함수를 썼는데 들어오는게 없으면 평생 기다리게 될 수 잇음, 이 모드 쓰면 읽을 데이터 없으면 read는 -1 리턴함. write도
+read 함수를 썼는데 들어오는게 없으면 평생 기다리게 될 수 잇음,
+이 모드 쓰면 읽을 데이터 없으면 read는 -1 리턴함. write도
 
 ### (5) O_TRUNC
 
@@ -38,11 +41,13 @@ read 함수를 썼는데 들어오는게 없으면 평생 기다리게 될 수 �
 
 ### (7) O_NOATIME
 
-읽으면 파일 액세스 시간이 바뀌는 식으로 시스템에 조금이라도 부하를 주게 되는데 이 모드면 그게 없다는듯
+읽으면 파일 액세스 시간이 바뀌는 식으로 시스템에 조금이라도 부하를 주게 되는데
+이 모드면 그게 없다는듯
 
 ## 2. fsync, fdatasync
 
-fsync는 버퍼를 비우고, fdatasync는 데이터만 비우고. 인자 줄 거 없고 에러나면 -1 반환. 라이브러리는 unistd.h
+fsync는 버퍼를 비우고, fdatasync는 데이터만 비우고.
+인자 줄 거 없고 에러나면 -1 반환. 라이브러리는 unistd.h
 
 fflush 대신 써도 댐
 
@@ -50,11 +55,13 @@ fflush 대신 써도 댐
 
 lseek은 파일 위치 변경, 세번째 인자로 SEEK_SET, SEEK_CUR, SEEK_END가 있음.
 
-pread랑 pwrite는 read랑 write과 거의 같은데 마지막 인자에 좌표값 줘서 읽거나 쓸 수 있음
+pread랑 pwrite는 read랑 write과 거의 같은데
+마지막 인자에 좌표값 줘서 읽거나 쓸 수 있음
 
 ## 4. truncate, ftruncate
 
-해당 파일의 사이즈를 정하는 함수, truncate는 경로를 받고, ftruncate는 파일 디스크립터를 받음
+해당 파일의 사이즈를 정하는 함수, truncate는 경로를 받고,
+ftruncate는 파일 디스크립터를 받음
 
 ## 5. select, pselect
 
@@ -63,9 +70,13 @@ int select(int n, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct t
 int pselect(int n, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, const struct timespec *timeout, const sigset_t *sigmask);
 ```
 
-이렇게 생겨먹었다. select 함수는 timeval 구조체를 받고, pselect 함수는 simespec 구조체를 받는다. pselect는 추가로 sigmask도 받는데, 이게 가장 큰 차이래. 둘 다 sys/select.h 헤더를 필요로 함
+이렇게 생겨먹었다. select 함수는 timeval 구조체를 받고,
+pselect 함수는 simespec 구조체를 받는다.
+pselect는 추가로 sigmask도 받는데, 이게 가장 큰 차이라고 한다.
+둘 다 sys/select.h 헤더를 필요로 함
 
-대충 이런 식으로 쓰면 되는 것 같은데... 아직 시그널 부분을 어떻게 써야되는지 모르겠다.
+대충 이런 식으로 쓰면 되는 것 같은데...
+아직 시그널 부분을 어떻게 써야되는지 모르겠다.
 
 ```c
 #include <stdio.h>
@@ -90,7 +101,8 @@ if(FD_ISSET(STDIN_FILENO, &readfds)) { /* stdin에 읽을 데이터가 있으면
 
 ## 6. poll, ppoll
 
-select는 너무 기능이 적어~ 할 때 쓰는 것이 바로 poll 함수. 아래처럼 생김
+select는 너무 기능이 적어~ 할 때 쓰는 것이 바로 poll 함수.
+아래처럼 생김
 
 ```c
 #include <poll.h>
@@ -119,7 +131,8 @@ if (fds[0].revents & POLLIN) printf("stdin is readable\n");
 if (fds[1].revents & POLLOUT) printf("stdout is writable\n");
 ```
 
-select처럼 pselect도 있는데 리눅스에만 있음. _GNU_SOURCE 정의해줘야 쓸 수 있음
+select처럼 pselect도 있는데 리눅스에만 있음.
+_GNU_SOURCE 정의해줘야 쓸 수 있음
 
 ```c
 #define _GNU_SOURCE
@@ -133,7 +146,7 @@ timespec 구조체 넘조아
 
 수백 명이 서버에 접속했는데 select나 poll 함수를 써서 처리하는 건 느리고 비효율적이라고 한다.
 
-그래서 epoll 함수를 쓰는데 대충 이런 흐름으로 사용하는 것 같다
+그래서 epoll 함수를 쓰는데 대충 이런 흐름으로 사용하는 것 같다.
 
 ```c
 #include <sys/epoll.h> /* 다른 헤더는 생략 */
@@ -159,8 +172,8 @@ epoll_wait(epfd, evlist, 1, -1);
 if (evlist[1].events & EPOLLIN) { /* stdin이 들어올 때 내가 하고 싶은 거 */ }
 ```
 
-아 간단하게 쓰려고 했는데 넘 길다
+아 간단하게 쓰려고 했는데 넘 길다.
 
-이거 어떻게 쓰는지 감 잡으려면 내가 epoll 함수 쓴 소켓 서버 만들어봐야겟다
+이거 어떻게 쓰는지 감 잡으려면 내가 epoll 함수 쓴 소켓 서버 만들어봐야겠다.
 
 더 써야 할게 많지만 잠자러

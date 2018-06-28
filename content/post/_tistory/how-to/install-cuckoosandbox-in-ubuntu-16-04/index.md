@@ -204,7 +204,8 @@ unzip IE8.XP.For.Windows.VirtualBox.zip
 
 ![VirtualBox - Preferences](virtualbox-prefernces.png)
 
-버추얼박스의 환경설정에서 호스트 전용 어댑터를 하나 추가한다. 왠만하면 vboxnet0으로 설정을 진행하는 게 좋다.
+버추얼박스의 환경설정에서 호스트 전용 어댑터를 하나 추가한다.
+왠만하면 vboxnet0으로 설정을 진행하는 게 좋다.
 
 ![Host-only Network Details](host-only-network-details.png)
 
@@ -256,11 +257,13 @@ ip를 확인해준다.
 
 ![Off Windows Firewall](off-windows-firewall.png)
 
-파이썬과 PIL을 설치하고, 방화벽까지 해제했다. 자동 업데이트도 끄고 페이징 파일도 꺼준다.
+파이썬과 PIL을 설치하고, 방화벽까지 해제했다.
+자동 업데이트도 끄고 페이징 파일도 꺼준다.
 
 ![Take Snapshot of Virtual Machine](take-snapshot-of-virtual-machine.png)
 
-agent.py랑 procexp.exe를 실행하고 스냅샷을 SnapShot1(띄어쓰기 없이)으로 저장했다. 스냅샷 이름을 저렇게 해야 설정할때 편함ㅎ
+agent.py랑 procexp.exe를 실행하고 스냅샷을 SnapShot1(띄어쓰기 없이)으로 저장했다.
+스냅샷 이름을 저렇게 해야 설정할때 편함ㅎ
 
 ## 13. 쿠쿠박스 설정
 

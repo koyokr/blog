@@ -10,7 +10,8 @@ markup: mmark
 
 대신 `posix_spawn` 함수를 추천하는데...
 
-예전에 `system` 함수 대신 `fork` - `exec`를 쓴다고 한 글 [system 대신 fork - exec 쓰기](/post/fork-exec-instead-of-system/)에서 사용한 예시를 가져와보면
+예전에 `system` 함수 대신 `fork` - `exec`를 쓴다고 한 글
+[system 대신 fork - exec 쓰기](/post/fork-exec-instead-of-system/)에서 사용한 예시를 가져와보면
 
 ```c
 #include <unistd.h>
@@ -86,4 +87,4 @@ int main(int argc, char *argv[]) {
 
 짜잔~
 
-`spawn.h`를 include해서 사용하자
+`spawn.h`를 include해서 사용하자.

@@ -8,7 +8,7 @@ markup: mmark
 
 이번 글에선 머리 굴려서 정리할 게 없다.
 
-예제 코드에서 include한 csapp.h는 <http://csapp.cs.cmu.edu/3e/ics3/code/include/csapp.h> 를 사용했다.
+예제 코드에서 include한 csapp.h는 <http://csapp.cs.cmu.edu/3e/ics3/code/include/csapp.h>를 사용했다.
 
 책이나 인강 보셈!
 
@@ -25,7 +25,8 @@ pid_t getppid(void);
 
 각 프로세스는 0이 아닌 고유의 양수 프로세스 ID를 가진다.
 
-getpid 함수는 호출하는 프로세스의 ID를 반환하며, getppid 함수는 부모 프로세스의 ID를 반환한다.
+getpid 함수는 호출하는 프로세스의 ID를 반환하며,
+getppid 함수는 부모 프로세스의 ID를 반환한다.
 
 ## 2. 프로세스 생성과 종료
 
@@ -38,11 +39,13 @@ getpid 함수는 호출하는 프로세스의 ID를 반환하며, getppid 함수
 ### (2) 정지 (Stopped)
 
 프로세스는 정지된 상태다. 커널에 의해 스케줄되지 않는다.
-SIGSTOP, SIGTSTP, SIGTTIN, SIGTTOU 시그널을 받게 되면 SIGCONT 시그널을 받을 때까지 정지 상태로 남는다. (나중에 자세히 설명)
+SIGSTOP, SIGTSTP, SIGTTIN, SIGTTOU 시그널을 받게 되면
+SIGCONT 시그널을 받을 때까지 정지 상태로 남는다. (나중에 자세히 설명)
 
 ### (3) 종료 (Terminated)
 
-프로세스는 영구적으로 정지된다. 이유는 세 가지다. 프로세스를 종료하는 시그널, 메인 루틴에서 리턴, 그리고 exit 함수 호출이다.
+프로세스는 영구적으로 정지된다. 이유는 세 가지다.
+프로세스를 종료하는 시그널, 메인 루틴에서 리턴, 그리고 exit 함수 호출이다.
 
 ```c
 #include <stdlib.h>
@@ -61,7 +64,9 @@ pid_t fork(void);
 // Returns: 0 to child, PID of child to parent, -1 on error
 ```
 
-자식 프로세스는 부모 프로세스의 가상 주소 공간의 복사본을 갖는다. 또한 부모 프로세스가 연 파일 식별자의 복사본을 갖는다. 즉, 자식 프로세스는 부모 프로세스가 연 파일 식별자를 사용할 수 있다.
+자식 프로세스는 부모 프로세스의 가상 주소 공간의 복사본을 갖는다.
+또한 부모 프로세스가 연 파일 식별자의 복사본을 갖는다.
+즉, 자식 프로세스는 부모 프로세스가 연 파일 식별자를 사용할 수 있다.
 
 fork 함수 예제를 보고 더 이야기해보자.
 
@@ -108,9 +113,11 @@ $ child : x=2
 
 종료된 프로세스는 즉각 시스템에서 제거되지 않는다.
 
-부모 프로세스는 종료된 자식 프로세스를 청소해야 한다. 종료됐으나 청소되지 않은 자식 프로세스는 좀비(zombie)라고 한다.
+부모 프로세스는 종료된 자식 프로세스를 청소해야 한다.
+종료됐으나 청소되지 않은 자식 프로세스는 좀비(zombie)라고 한다.
 
-커널은 자식 프로세스가 부모를 잃으면 init 프로세스(pid: 1)가 부모가 되도록 하며, init 프로세스는 알아서 좀비 프로세스를 정리한다.
+커널은 자식 프로세스가 부모를 잃으면 init 프로세스(pid: 1)가 부모가 되도록 하며,
+init 프로세스는 알아서 좀비 프로세스를 정리한다.
 
 자식 프로세스의 종료를 기다리는 함수가 있다.
 
@@ -122,7 +129,8 @@ pid_t waitpid(pid_t pid, int *statusp, int options);
 // Returns: PID of child if OK, 0 (if WNOHANG), or -1 on error
 ```
 
-waitpid 함수는 인자 pid와 동일한 자식 프로세스를 대기 집합에 추가하며 -1을 주면 모든 자식 프로세스를 대기 집합에 추가한다.
+waitpid 함수는 인자 pid와 동일한 자식 프로세스를 대기 집합에 추가하며
+-1을 주면 모든 자식 프로세스를 대기 집합에 추가한다.
 
 인자 options에 줄 수 있는 옵션을 소개하면
 
@@ -130,7 +138,8 @@ waitpid 함수는 인자 pid와 동일한 자식 프로세스를 대기 집합�
 2. WUNTRACED: 대기 집합의 프로세스가 종료되거나 정지될 때까지 호출한 프로세스의 실행을 정지한다.
 3. WCONTINUED: 대기 집합에 속한 프로세스가 종료되거나 대기 집합에 속한 정지된 프로세스가 다시 실행될 때까지 호출한 프로세스의 실행을 정지한다.
 
-statusp 인자가 NULL이 아닐 때, waitpid 함수는 리턴하게 만든 자식 프로세스의 상태 정보를 status로 인코딩한다.
+statusp 인자가 NULL이 아닐 때, waitpid 함수는 리턴하게 만든 자식 프로세스의 상태 정보를
+status로 인코딩한다.
 
 wait.h 헤더에는 인코딩된 status 인자를 해석하기 위한 매크로를 제공한다.
 
@@ -190,9 +199,11 @@ child 13197 terminated normally with exit status=101
 child 13196 terminated normally with exit status=100
 ```
 
-책에서는 exit status=100인 프로세스가 먼저 청소됐는데, 내가 했을 땐 exit status=101인 프로세스가 먼저 청소됐다.
+책에서는 exit status=100인 프로세스가 먼저 청소됐는데,
+내가 했을 땐 exit status=101인 프로세스가 먼저 청소됐다.
 
-중요한 사실은 위 코드에서 생성된 두 자식프로세스 중 어느 프로세스가 먼저 청소될 것인지 예측할 수 없다는 점이다.
+중요한 사실은 위 코드에서 생성된 두 자식프로세스 중 어느 프로세스가
+먼저 청소될 것인지 예측할 수 없다는 점이다.
 
 ## 4. 프로세스 재우기
 
@@ -220,9 +231,10 @@ int execve(const char *filename, const char *argv[], const char *envp[]);
 // Does not return if OK; returns -1 on error
 ```
 
-execve 함수는 절대로 리턴하지 않는다. 에러만 나지 않는다면.
+execve 함수는 절대로 리턴하지 않는다. 에러만 안나면.
 
-execve는 filename을 로드하고 시작 코드를 호출한다. 시작 코드는 스택을 설정하고 제어를 새 프로그램의 메인 루틴으로 전달한다.
+execve는 filename을 로드하고 시작 코드를 호출한다.
+시작 코드는 스택을 설정하고 제어를 새 프로그램의 메인 루틴으로 전달한다.
 
 이 루틴의 프로토타입은 우리가 잘 아는 그것이다.
 
@@ -241,7 +253,8 @@ char *getenv(const char *name);
 // Returns: pointer to name if it exists, NULL if no match
 ```
 
-getenv 함수는 환경 배열에서 "name=value" 문자열을 검색하며, 찾으면 value에 대한 포인터를 반환한다.
+getenv 함수는 환경 배열에서 "name=value" 문자열을 검색하며,
+찾으면 value에 대한 포인터를 반환한다.
 
 ```c
 #include <stdlib.h>
@@ -252,7 +265,8 @@ void unsetenv(const char *name);
 // Returns: nothing
 ```
 
-setenv 함수는 overwrite가 0이 아니라면 value를 newvalue로 교체한다. 만약 name을 찾지 못하면 "name=newvalue"를 배열에 추가한다.
+setenv 함수는 overwrite가 0이 아니라면 value를 newvalue로 교체한다.
+만약 name을 찾지 못하면 "name=newvalue"를 배열에 추가한다.
 
 unsetenv 함수는 검색한 "name=value" 문자열을 삭제한다.
 

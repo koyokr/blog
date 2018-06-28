@@ -22,7 +22,8 @@ php 저장소 추가
 
 add-apt-repository ppa:ondrej/php
 
-mariadb 저장소 추가. <https://downloads.mariadb.org/mariadb/repositories/> 에서 직접 보고 하는 걸 추천
+mariadb 저장소 추가.
+<https://downloads.mariadb.org/mariadb/repositories/> 에서 직접 보고 하는 걸 추천
 
 ```sh
 apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8

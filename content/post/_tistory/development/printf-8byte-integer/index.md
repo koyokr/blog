@@ -6,7 +6,8 @@ categories: [development]
 markup: mmark
 ---
 
-`int64_t`는 보통 아래처럼 정의되어 있다. `uint64_t`는 여기에 `unsigned`만 붙었다.
+`int64_t`는 보통 아래처럼 정의되어 있다.
+`uint64_t`는 여기에 `unsigned`만 붙었다.
 
 ```c
 #if __WORDSIZE == 64
@@ -17,7 +18,9 @@ typedef long long int  int64_t
 #endif
 ```
 
-`long int`를 `printf`로 출력하기 위한 서식문자는 `%ld`이고, `long long int`를 `printf`로 출력하기 위한 서식문자는 `%lld`이다. 그래서 환경이 32비트일 때랑 64비트일 때량 써야 하는 서식문자가 다르다.
+`long int`를 `printf`로 출력하기 위한 서식문자는 `%ld`이고,
+`long long int`를 `printf`로 출력하기 위한 서식문자는 `%lld`이다.
+그래서 환경이 32비트일 때랑 64비트일 때량 써야 하는 서식문자가 다르다.
 
 사람들은 보통 두 가지 방법을 쓰는 것 같다.
 

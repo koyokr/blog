@@ -8,7 +8,8 @@ markup: mmark
 
 PySide 설치하는 방법 자세하게 적는 글
 
-현재 PySide는 Python 3.5와 Qt5를 지원하지 않는다. PySide2는 Qt5를 지원하지만 아직 한창 개발 중인 것 같아 Qt4.8을 쓰기로 했다.
+현재 PySide는 Python 3.5와 Qt5를 지원하지 않는다.
+PySide2는 Qt5를 지원하지만 아직 한창 개발 중인 것 같아 Qt4.8을 쓰기로 했다.
 
 ## 1. Python 설치
 
@@ -18,7 +19,8 @@ PySide 설치하는 방법 자세하게 적는 글
 
 VS 버전 설정이 어려울 것 같아서 그냥 MinGW를 위한 버전으로 설치했다.
 
-Qt 4.8.7이 지원하는 MinGW-w64 버전은 4.8.2고, 다운로드는 아래 링크에서 받을 수 있다. mingw32 폴더를 C:\에 풀자. 마음에 안들면 다른 데 풀덩가
+Qt 4.8.7이 지원하는 MinGW-w64 버전은 4.8.2고, 다운로드는 아래 링크에서 받을 수 있다.
+mingw32 폴더를 C:\에 풀자. 마음에 안들면 다른 데 풀덩가
 
 <https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/4.8.2/threads-win32/dwarf/>
 

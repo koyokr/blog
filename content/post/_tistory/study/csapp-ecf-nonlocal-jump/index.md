@@ -22,7 +22,8 @@ setjmp 함수는 현재 '호출하는 환경'을 env 버퍼에 저장하며 0을
 
 '호출하는 환경'은 프로그램 카운터, 스택 포인터, 범용 레지스터 등을 포함한다.
 
-setjmp가 리턴하는 값은 switch문이나 if문의 조건으로 사용될 수 있다. 그리고 리턴값이 변수에 할당되면 안된다.
+setjmp가 리턴하는 값은 switch문이나 if문의 조건으로 사용될 수 있다.
+그리고 리턴값이 변수에 할당되면 안된다.
 
 ```c
 #include <setjmp.h>
@@ -32,7 +33,8 @@ void siglongjmp(sigjmp_buf env, int savesigs);
 // Never returns
 ```
 
-longjmp 함수는 호출하는 환경을 env 버퍼에서 복원하고, 가장 최근의 setjmp 호출에서 리턴한다.
+longjmp 함수는 호출하는 환경을 env 버퍼에서 복원하고,
+가장 최근의 setjmp 호출에서 리턴한다.
 
 이 때, setjmp는 longjmp의 인자 retval를 리턴한다.
 

@@ -6,7 +6,8 @@ categories: [how-to]
 markup: mmark
 ---
 
-우분투 터미널 환경에서 racket을 설치하고 vim으로 코드를 작성하여 sicp 예제를 실행하기 위한 환경을 설정하는 것
+우분투 터미널 환경에서 racket을 설치하고 vim으로 코드를 작성하여
+sicp 예제를 실행하기 위한 환경을 설정하는 것
 
 vim 버전이 쫌 높아야 되는 걸루 기억
 
