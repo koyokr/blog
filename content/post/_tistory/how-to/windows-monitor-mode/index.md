@@ -4,19 +4,18 @@ slug: windows-monitor-mode
 date: 2017-02-14 22:49:00 +0900 KST
 categories: [how-to]
 markup: mmark
+aliases: [/65/]
 ---
 
 ## 개요
 
 windows에서 wireshark로 IEEE 802.11 패킷을 잡는 것을 목표로 글을 쓴다.
 
-글 따라하려면 필요한 것
+글 따라하려면 필요한 것.
 
-monitor mode를 지원하는 무선 어댑터
-
-npcap
-
-wireshark
+* monitor mode를 지원하는 무선 어댑터
+* npcap
+* wireshark
 
 ## 1. monitor mode를 지원하는 무선 어댑터
 
@@ -38,7 +37,7 @@ wireshark
 
 ### - monitor mode 지원 확인하는 방법
 
-```bat
+```powershell
 netsh wlan show wirelesscapabilities
 ```
 
@@ -58,7 +57,9 @@ npcap을 깔았다면 WlanHelper 프로그램을 사용할 수 있다.
 
 인터페이스 이름이 N150UA라고 가정하겠다.
 
+```powershell
 WlanHelper N150UA mode
+```
 
 #### 인터페이스의 mode를 확인
 
@@ -69,7 +70,9 @@ managed
 
 보통 managed로 돼있다.
 
+```bat
 WlanHelper N150UA mode monitor
+```
 
 #### 인터페이스의 mode를 monitor mode로 변경
 
@@ -78,9 +81,9 @@ WlanHelper N150UA mode monitor
 Success
 ```
 
-Success가 뜨면 성공적으로 monitor mode로 바뀐 것이다.
+Success가 뜨면 monitor mode로 바뀐 것이다.
 
-### - wireshark에서 IEEE 802.11 패킷 캡쳐
+### wireshark에서 IEEE 802.11 패킷 캡쳐
 
 ![Capture Interfaces in wireshark](capture-interfaces-in-wireshark.png)
 
