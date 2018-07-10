@@ -4,7 +4,7 @@ go:
   - "1.10.3"
 install:
   - mkdir -p bin
-  - curl -L https://github.com/gohugoio/hugo/releases/download/v0.43/hugo_extended_0.43_Linux-64bit.tar.gz -o bin/hugo.tar.gz
+  - curl -L https://github.com/gohugoio/hugo/releases/download/v0.43/hugo_0.43_Linux-64bit.tar.gz -o bin/hugo.tar.gz
   - tar -xzvvf bin/hugo.tar.gz -C bin
 before_script:
   - mkdir -p static/css
