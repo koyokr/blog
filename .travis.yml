@@ -3,12 +3,14 @@ language: go
 go:
   - "1.10.3"
 install:
-  - go get github.com/gohugoio/hugo
+  - mkdir -p bin
+  - curl -L https://github.com/gohugoio/hugo/releases/download/v0.43/hugo_extended_0.43_Linux-64bit.tar.gz -o bin/hugo.tar.gz
+  - tar -xzvvf bin/hugo.tar.gz -C bin
 before_script:
-  - mkdir static/css
-  - hugo gen chromastyles --style github > static/css/syntax.css
+  - mkdir -p static/css
+  - bin/hugo gen chromastyles --style github > static/css/syntax.css
 script:
-  - hugo
+  - bin/hugo
 deploy:
   provider: pages
   skip_cleanup: true
