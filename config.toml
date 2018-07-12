@@ -1,5 +1,4 @@
 baseURL = "https://koyo.kr/"
-canonifyURLs = true
 title = "KOYO KR"
 theme = "beautifulhugo"
 languageCode = "ko"
