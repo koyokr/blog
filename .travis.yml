@@ -3,14 +3,14 @@ language: go
 go:
   - "1.10.3"
 install:
-  - mkdir -p bin
-  - curl -L https://github.com/gohugoio/hugo/releases/download/v0.43/hugo_0.43_Linux-64bit.tar.gz -o bin/hugo.tar.gz
-  - tar -xzvvf bin/hugo.tar.gz -C bin
+  - go get -tags extended github.com/gohugoio/hugo
+  - go get github.com/tdewolff/minify/cmd/minify
 before_script:
-  - mkdir -p static/css
-  - bin/hugo gen chromastyles --style github > static/css/syntax.css
+  - mkdir -p assets/scss
+  - hugo gen chromastyles --style github > assets/scss/syntax.scss
 script:
-  - bin/hugo
+  - hugo
+  - minify --html-keep-document-tags --html-keep-end-tags --html-keep-whitespace --match \.html -o public -r public
 deploy:
   provider: pages
   skip_cleanup: true

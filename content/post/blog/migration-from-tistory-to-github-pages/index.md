@@ -53,7 +53,7 @@ tistory에 작성한 글을 markdown으로 변환해야 했다.
 python의 html2text 라이브러리를 사용는데 아니 이거 내 생각대로 안바꿔주는 거다.\
 변환된 markdown을 내 입맛에 맞게 고쳐야 해서 여기에 시간을 많이 썼다.
 
-기존 글은 <koyo.kr/96>과 같은 url로 접속해왔기 때문에 변환한 글도 그렇게 접속하게끔 url을 지정했다.\
+기존 글은 <https://koyo.kr/96>과 같은 url로 접속해왔기 때문에 변환한 글도 그렇게 접속하게끔 url을 지정했다.\
 나중에는 모든 글에 숫자가 아닌 slug를 지정해주고 기존 url로 접속하면 redirect되게끔 할 계획이다.
 
 ### Static Site Generator
