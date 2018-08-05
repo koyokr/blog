@@ -1,9 +1,10 @@
 ---
 title: Visual Studio를 설치했는데 WinDbg가 없을 때
-slug: not-found-windbg-after-install-visual-studio
+slug: not-found-windbg
 date: 2017-03-15 16:02:00 +0900 KST
-categories: [how-to]
+categories: [etc]
 markup: mmark
+aliases: [/not-found-windbg-after-install-visual-studio/]
 ---
 
 ## 환경

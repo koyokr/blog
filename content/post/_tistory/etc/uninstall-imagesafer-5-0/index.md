@@ -2,7 +2,7 @@
 title: ImageSafer 5.0 삭제하기
 slug: uninstall-imagesafer-5-0
 date: 2016-10-20 14:07:00 +0900 KST
-categories: [how-to]
+categories: [etc]
 markup: mmark
 ---
 

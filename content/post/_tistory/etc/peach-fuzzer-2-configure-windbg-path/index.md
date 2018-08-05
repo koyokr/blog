@@ -2,7 +2,7 @@
 title: Peach Fuzzer 2 WinDbg 경로 설정
 slug: peach-fuzzer-2-configure-windbg-path
 date: 2015-10-28 23:07:00 +0900 KST
-categories: [how-to]
+categories: [etc]
 markup: mmark
 ---
 

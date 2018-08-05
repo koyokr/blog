@@ -2,7 +2,7 @@
 title: Racket 설치하고 SICP 실습하기
 slug: install-racket-and-practice-sicp
 date: 2017-12-17 21:12:00 +0900 KST
-categories: [how-to]
+categories: [etc]
 markup: mmark
 ---
 

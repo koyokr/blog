@@ -1,9 +1,10 @@
 ---
 title: Ubuntu 16.04에서 Nginx, PHP, MariaDB 설치하기
-slug: install-nginx-php-mariadb-in-ubuntu-16-04
+slug: install-nginx-php-mariadb-in-ubuntu
 date: 2016-09-13 16:33:00 +0900 KST
-categories: [how-to]
+categories: [etc]
 markup: mmark
+aliases: [/install-nginx-php-mariadb-in-ubuntu-16-04/]
 ---
 
 나중에 보려고 쓰는 글. 아래 링크 보고 많이 따라했음

@@ -2,7 +2,7 @@
 title: Windows에서 Monitor Mode 쓰기
 slug: windows-monitor-mode
 date: 2017-02-14 22:49:00 +0900 KST
-categories: [how-to]
+categories: [etc]
 markup: mmark
 aliases: [/65/]
 ---
