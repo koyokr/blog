@@ -4,7 +4,7 @@ slug: install-cuckoosandbox-in-ubuntu
 date: 2016-10-11 00:33:00 +0900 KST
 categories: [etc]
 markup: mmark
-aliases: [/install-cuckoosandbox-in-ubuntu-16-04/]
+aliases: [/post/install-cuckoosandbox-in-ubuntu-16-04/]
 ---
 
 설치하면서 작성하는 글.

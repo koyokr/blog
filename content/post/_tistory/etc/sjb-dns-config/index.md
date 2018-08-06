@@ -4,7 +4,7 @@ slug: sjb-dns-config
 date: 2017-12-10 18:02:00 +0900 KST
 categories: [etc]
 markup: mmark
-aliases: [/96/, /configure-windows-dns/]
+aliases: [/96/, /post/configure-windows-dns/]
 ---
 
 ## DNS 서버 변경

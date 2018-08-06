@@ -4,7 +4,7 @@ slug: not-found-windbg
 date: 2017-03-15 16:02:00 +0900 KST
 categories: [etc]
 markup: mmark
-aliases: [/not-found-windbg-after-install-visual-studio/]
+aliases: [/post/not-found-windbg-after-install-visual-studio/]
 ---
 
 ## 환경

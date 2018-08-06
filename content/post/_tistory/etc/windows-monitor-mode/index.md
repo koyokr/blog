@@ -4,7 +4,6 @@ slug: windows-monitor-mode
 date: 2017-02-14 22:49:00 +0900 KST
 categories: [etc]
 markup: mmark
-aliases: [/65/]
 ---
 
 ## 개요

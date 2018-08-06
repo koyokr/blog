@@ -4,7 +4,7 @@ slug: csapp-machine-level-array-alignment
 date: 2017-03-13 17:51:00 +0900 KST
 categories: [csapp]
 markup: mmark
-aliases: [/csapp-machine-level-array-sort/]
+aliases: [/post/csapp-machine-level-array-sort/]
 ---
 
 ## 1. 배열과 포인터 연산

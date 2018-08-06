@@ -4,7 +4,7 @@ slug: windows-check-hash
 date: 2016-01-17 22:18:00 +0900 KST
 categories: [etc]
 markup: mmark
-aliases: [/windows-file-properties-check-hash/]
+aliases: [/post/windows-file-properties-check-hash/]
 ---
 
 ![HashTab](hashtab.png)
