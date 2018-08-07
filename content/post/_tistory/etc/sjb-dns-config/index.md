@@ -298,6 +298,7 @@ echo      74.125.24.141      www.golang.org
 echo      74.125.24.141      blog.golang.org
 echo      74.125.24.141      play.golang.org
 echo      74.125.24.141      tour.golang.org
+echo      74.125.24.141      developer.chrome.com
 echo      74.125.24.141      survey.g.doubleclick.net
 echo      74.125.24.141      cloud.withgoogle.com
 echo      74.125.24.141      csp.withgoogle.com
