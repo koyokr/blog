@@ -3,7 +3,7 @@ language: go
 go:
   - "1.10.3"
 install:
-  - go get -tags extended github.com/gohugoio/hugo
+  - go get github.com/gohugoio/hugo
   - go get github.com/tdewolff/minify/cmd/minify
 before_script:
   - mkdir -p assets/scss
