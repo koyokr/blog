@@ -6,8 +6,8 @@ install:
   - go get github.com/gohugoio/hugo
   - go get github.com/tdewolff/minify/cmd/minify
 before_script:
-  - mkdir -p assets/scss
-  - hugo gen chromastyles --style github > assets/scss/syntax.scss
+  - mkdir -p assets/css
+  - hugo gen chromastyles --style github > assets/css/syntax.css
 script:
   - hugo
   - minify --html-keep-document-tags --html-keep-end-tags --html-keep-whitespace --match \.html -o public -r public
