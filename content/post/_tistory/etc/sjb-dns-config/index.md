@@ -291,6 +291,7 @@ echo      74.125.24.132      lh3.googleusercontent.com
 echo      74.125.24.132      lh4.googleusercontent.com
 echo      74.125.24.132      lh5.googleusercontent.com
 echo      74.125.24.132      lh6.googleusercontent.com
+echo      74.125.24.132      translate.googleusercontent.com
 echo      74.125.24.132      tpc.googlesyndication.com
 echo      74.125.24.141      golang.org
 echo      74.125.24.141      www.golang.org
