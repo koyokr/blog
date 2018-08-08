@@ -1,6 +1,7 @@
 baseURL = "https://koyo.kr/"
 title = "KOYO KR"
 theme = "beautifulhugo"
+defaultContentLanguage = "ko"
 languageCode = "ko"
 hasCJKLanguage = true
 metaDataFormat = "yaml"
