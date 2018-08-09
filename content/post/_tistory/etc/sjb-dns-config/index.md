@@ -48,6 +48,9 @@ echo       13.229.189.0      codeload.github.com
 echo     13.250.162.133      codeload.github.com
 echo      54.251.140.56      codeload.github.com
 
+echo     93.184.215.201      download.visualstudio.microsoft.com
+echo      117.18.237.70      pbs.twimg.com
+
 echo       74.125.24.17      gmail.com
 echo       74.125.24.18      gmail.com
 echo       74.125.24.19      gmail.com
@@ -368,8 +371,6 @@ echo      74.125.24.191      www.blogger.com
 echo      74.125.24.191      blogblog.com
 echo      74.125.24.191      www.blogblog.com
 echo      74.125.24.191      resources.blogblog.com
-
-echo     93.184.215.201      download.visualstudio.microsoft.com
 )>> C:\Windows\System32\drivers\etc\hosts
 ```
 
