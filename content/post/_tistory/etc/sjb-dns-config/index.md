@@ -208,6 +208,7 @@ echo      74.125.24.100      docs.google.com
 echo      74.125.24.100      drive.google.com
 echo      74.125.24.100      earth.google.com
 echo      74.125.24.100      edu.google.com
+echo      74.125.24.100      fcmatch.google.com
 echo      74.125.24.100      fonts.google.com
 echo      74.125.24.100      get.google.com
 echo      74.125.24.100      gg.google.com
@@ -244,6 +245,7 @@ echo      74.125.24.100      video.google.com
 echo      74.125.24.100      www.google-analytics.com
 echo      74.125.24.100      encrypted-tbn0.gstatic.com
 echo      74.125.24.100      accounts.youtube.com
+echo      74.125.24.100      fcmatch.youtube.com
 echo      74.125.24.100      img.youtube.com
 echo      74.125.24.100      i1.ytimg.com
 echo      74.125.24.100      i2.ytimg.com
@@ -255,6 +257,8 @@ echo      74.125.24.100      ampproject.net
 echo      74.125.24.100      www.ampproject.net
 echo      74.125.24.100      doubleclick.net
 echo      74.125.24.100      www.doubleclick.net
+echo      74.125.24.100      schema.org
+echo      74.125.24.100      www.schema.org
 echo      74.125.24.100      goo.gl
 echo      74.125.24.100      www.goo.gl
 echo      74.125.24.100      books.google.co.kr
@@ -310,9 +314,15 @@ echo      74.125.24.141      tourbuilder.withgoogle.com
 echo      74.125.24.148      ad.doubleclick.net
 echo      74.125.24.149      ad.doubleclick.net
 echo      74.125.24.148      static.doubleclick.net
-echo      74.125.24.149      ad.doubleclick.net
+echo      74.125.24.149      static.doubleclick.net
 echo      74.125.24.148      2542116.fls.doubleclick.net
-echo      74.125.24.149      ad.doubleclick.net
+echo      74.125.24.149      2542116.fls.doubleclick.net
+echo      74.125.24.148      s0.2mdn.net
+echo      74.125.24.149      s0.2mdn.net
+echo      74.125.24.148      s1.2mdn.net
+echo      74.125.24.149      s1.2mdn.net
+echo      74.125.24.148      s2.2mdn.net
+echo      74.125.24.149      s2.2mdn.net
 echo      74.125.24.153      chrome-devtools-frontend.appspot.com
 echo      74.125.24.153      gweb-multiscreen-hub.appspot.com
 echo      74.125.24.153      premiumyva.appspot.com
@@ -349,6 +359,10 @@ echo      74.125.24.154      www.googleadservices.com
 echo      74.125.24.155      www.googleadservices.com
 echo      74.125.24.156      www.googleadservices.com
 echo      74.125.24.157      www.googleadservices.com
+echo      74.125.24.154      ade.googlesyndication.com
+echo      74.125.24.155      ade.googlesyndication.com
+echo      74.125.24.156      ade.googlesyndication.com
+echo      74.125.24.157      ade.googlesyndication.com
 echo      74.125.24.154      pagead2.googlesyndication.com
 echo      74.125.24.155      pagead2.googlesyndication.com
 echo      74.125.24.156      pagead2.googlesyndication.com
