@@ -57,6 +57,7 @@ echo     13.250.195.152      assets.github.com
 echo     93.184.215.201      download.visualstudio.microsoft.com
 echo     104.244.46.167      abs.twimg.com
 echo     104.244.46.231      abs.twimg.com
+echo      117.18.237.66      platform.twitter.com
 echo      117.18.237.70      pbs.twimg.com
 
 echo       74.125.24.17      gmail.com
