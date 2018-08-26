@@ -38,15 +38,21 @@ echo      52.74.223.119      github.com
 echo      13.229.188.59      www.github.com
 echo     13.250.177.223      www.github.com
 echo      52.74.223.119      www.github.com
-echo      13.250.94.254      api.github.com
-echo      13.250.168.23      api.github.com
-echo     54.169.195.247      api.github.com
 echo      13.229.188.59      gist.github.com
 echo     13.250.177.223      gist.github.com
 echo      52.74.223.119      gist.github.com
+echo      13.229.188.59      shop.github.com
+echo     13.250.177.223      shop.github.com
+echo      52.74.223.119      shop.github.com
+echo      13.250.94.254      api.github.com
+echo      13.250.168.23      api.github.com
+echo     54.169.195.247      api.github.com
 echo       13.229.189.0      codeload.github.com
 echo     13.250.162.133      codeload.github.com
 echo      54.251.140.56      codeload.github.com
+echo     13.250.183.169      assets.github.com
+echo     13.250.186.164      assets.github.com
+echo     13.250.195.152      assets.github.com
 
 echo     93.184.215.201      download.visualstudio.microsoft.com
 echo     104.244.46.167      abs.twimg.com
@@ -115,6 +121,7 @@ echo       74.125.24.94      recaptcha.net
 echo       74.125.24.94      www.recaptcha.net
 echo       74.125.24.94      google.co.kr
 echo       74.125.24.94      www.google.co.kr
+echo       74.125.24.94      accounts.google.co.kr
 echo       74.125.24.94      id.google.co.kr
 echo       74.125.24.94      maps.google.co.kr
 echo       74.125.24.94      khms0.google.co.kr
@@ -337,6 +344,14 @@ echo      74.125.24.154      googleads.g.doubleclick.net
 echo      74.125.24.155      googleads.g.doubleclick.net
 echo      74.125.24.156      googleads.g.doubleclick.net
 echo      74.125.24.157      googleads.g.doubleclick.net
+echo      74.125.24.154      googleads2.g.doubleclick.net
+echo      74.125.24.155      googleads2.g.doubleclick.net
+echo      74.125.24.156      googleads2.g.doubleclick.net
+echo      74.125.24.157      googleads2.g.doubleclick.net
+echo      74.125.24.154      googleads4.g.doubleclick.net
+echo      74.125.24.155      googleads4.g.doubleclick.net
+echo      74.125.24.156      googleads4.g.doubleclick.net
+echo      74.125.24.157      googleads4.g.doubleclick.net
 echo      74.125.24.154      pubads.g.doubleclick.net
 echo      74.125.24.155      pubads.g.doubleclick.net
 echo      74.125.24.156      pubads.g.doubleclick.net
