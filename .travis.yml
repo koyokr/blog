@@ -1,24 +1,8 @@
 sudo: false
 language: go
 go:
-  - "1.10.3"
+  - 1.11
 install:
   - go get github.com/gohugoio/hugo
-  - go get github.com/tdewolff/minify/cmd/minify
-before_script:
-  - mkdir -p assets/css
-  - hugo gen chromastyles --style github > assets/css/syntax.css
 script:
   - hugo
-  - minify --html-keep-document-tags --html-keep-end-tags --html-keep-whitespace --match \.html -o public -r public
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  local_dir: public
-  repo: koyokr/koyokr.github.io
-  target-branch: master
-  committer-from-gh: true
-  on:
-    branch: master
