@@ -1,9 +1,13 @@
- [[redirects]]
+[build]
+  publish = "public"
+  command = "hugo"
+
+[[redirects]]
   from = "https://koyo.netlify.com/*"
   to = "https://koyo.kr/:splat"
   status = 301
   force = true
-    
+
 [[headers]]
   for = "/*"
   [headers.values]
