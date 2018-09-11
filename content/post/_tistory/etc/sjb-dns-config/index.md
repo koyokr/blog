@@ -141,12 +141,12 @@ echo      74.125.24.95     appsitemsuggest-pa.clients6.google.com
 echo      74.125.24.95     blobcomments-pa.clients6.google.com
 echo      74.125.24.95     people-pa.clients6.google.com
 echo      74.125.24.95     realtimesupport.clients6.google.com
-echo      74.125.24.95     imasdk.googleapis.com
 echo      74.125.24.95     www.googleapis.com
 echo      74.125.24.95     ajax.googleapis.com
 echo      74.125.24.95     chart.googleapis.com
 echo      74.125.24.95     content.googleapis.com
 echo      74.125.24.95     fonts.googleapis.com
+echo      74.125.24.95     imasdk.googleapis.com
 echo      74.125.24.95     incrementalwebfonts-pa.googleapis.com
 echo      74.125.24.95     maps.googleapis.com
 echo      74.125.24.95     safebrowsing.googleapis.com
