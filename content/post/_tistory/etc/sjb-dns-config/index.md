@@ -31,7 +31,6 @@ ipconfig /flushdns
 
 ```bat
 (
-(
 echo  #
 echo     13.229.188.59     github.com
 echo    13.250.177.223     github.com
@@ -407,7 +406,7 @@ echo     74.125.24.191     www.blogger.com
 echo     74.125.24.191     blogblog.com
 echo     74.125.24.191     www.blogblog.com
 echo     74.125.24.191     resources.blogblog.com
-)>> C:\Windows\System32\drivers\etc\hosts
+) >> C:\Windows\System32\drivers\etc\hosts
 ```
 
 명령 프롬프트 복붙 ㄱㄱ
