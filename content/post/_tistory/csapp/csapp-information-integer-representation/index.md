@@ -78,7 +78,7 @@ int main() {
 
 ## 3. signed, unsigned 간의 변환과 서로 다른 데이터 길이 간의 변환
 
-아래 코드에서 short형의 변수를 unsinged int형의 변수에 대입하고 있다. 
+아래 코드에서 short형의 변수를 unsinged int형의 변수에 대입하고 있다.
 unsigned로의 변환이 먼저 일어날까? int형으로의 변환이 먼저 일어날까?
 
 ```c

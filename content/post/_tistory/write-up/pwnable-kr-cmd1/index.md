@@ -39,7 +39,7 @@ export 명령어로 환경변수를 하나 지정해서 넣어주면 된다.
 
 tmp를 못쓰면 tmp에서 하면 되지!! 해서 이렇게
 
-```
+```console
 $ mkdir /tmp/cmd1k
 $ ln -s /home/cmd1/cmd1 /tmp/cmd1k/cmd1
 $ ln -s /home/cmd1/flag /tmp/cmd1k/f

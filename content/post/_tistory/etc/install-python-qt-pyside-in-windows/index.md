@@ -46,7 +46,7 @@ pip3 install pyside
 '1.2.4'
 >>> PySide.QtCore.__version__
 '4.8.7'
->>> 
+>>>
 ```
 
 난 잘되는듯!

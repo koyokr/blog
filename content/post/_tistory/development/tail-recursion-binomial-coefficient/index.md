@@ -40,7 +40,7 @@ int f(int n, int k) {
 `f(n, k)`는...
 
 $$
-f(n,k) = \frac{n!}{k!(n-k)!} 
+f(n,k) = \frac{n!}{k!(n-k)!}
 = \frac{(n-1)!}{(k-1)!(n-k)!} \times \frac{n}{k}
 = f(n-1,k-1) \times \frac{n}{k}
 $$

@@ -143,7 +143,7 @@ pw_buf와 pw_buf2 모두 사용자가 데이터를 입력할 수 있고,
 xor(pw_buf, 10);
 ```
 
-```
+```c
 void xor(char* s, int len){
     int i;
     for(i=0; i<len; i++){
