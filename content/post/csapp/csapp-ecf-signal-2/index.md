@@ -376,7 +376,7 @@ while (!pid)
     pause();
 ```
 
-이 코드는 race condition을 갖는다. `Sigprocmask` 함수와 `while`문 사이에 `SIGCHLD`가 먼저 호출되면 프로그램은 영영 멈출 것이다.
+이 코드는 race condition을 갖는다. `while` 테스트와 `pause` 호출 사이에 `SIGCHLD`가 호출되면 프로그램은 영영 멈출 것이다.
 
 그렇다면 아래와 같은 코드는?
 
@@ -385,7 +385,7 @@ while (!pd)
     sleep(1);
 ```
 
-race condtion도 없고,시스템 자원도 많이 먹지 않는다. 그러나 프로그램이 느려진다.
+race condtion도 없고, 시스템 자원도 많이 먹지 않는다. 그러나 프로그램이 느려진다.
 
 이 문제를 해결하기 위해 `sigsuspend` 함수를 사용할 수 있다.
 
@@ -399,7 +399,7 @@ int sigsuspend(const sigset_t *mask);
 위 함수는 아래 세 줄 코드의 원자형(atomic) 버전이다. 즉, race condition 문제에서 자유롭다.
 
 ```c
-sigprocmask(SIG_BLOCK, &mask, &prev);
+sigprocmask(SIG_SETMASK, &mask, &prev);
 pause();
 sigprocmask(SIG_SETMASK, &prev, NULL);
 ```
