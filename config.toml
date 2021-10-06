@@ -31,7 +31,7 @@ googleAnalytics = "UA-72551408-1"
   website = "https://koyo.kr"
   email = "koyo@koyo.kr"
   github = "koyokr"
-  linkedin = "younghun-ko-249125135"
+  linkedin = "koyo"
 
 [[menu.main]]
   name = "Home"
