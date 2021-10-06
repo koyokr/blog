@@ -1,3 +1,4 @@
 [submodule "themes/beautifulhugo"]
 	path = themes/beautifulhugo
 	url = https://github.com/koyokr/beautifulhugo
+	branch = master

@@ -2,21 +2,17 @@
   publish = "public"
   command = "hugo --minify"
 
+[build.environment]
+  HUGO_VERSION = "0.88.1"
+
 [context.production.environment]
-  HUGO_VERSION = "0.59.0"
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "hugo --buildFuture -b $DEPLOY_PRIME_URL"
-
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.59.0"
+  command = "hugo --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "hugo -b $DEPLOY_PRIME_URL"
-
-[context.branch-deploy.environment]
-  HUGO_VERSION = "0.59.0"
+  command = "hugo --minify -b $DEPLOY_PRIME_URL"
 
 [[redirects]]
   from = "https://koyo.netlify.com/*"
