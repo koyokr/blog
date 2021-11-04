@@ -79,6 +79,8 @@ ATT 형식의 어셈블리 코드 읽는 법..
 
 ## 4. 데이터 이동 인스트럭션(Instruction)
 
+### 간단한 데이터 이동 인스트럭션
+
 | Instruction  | Effect           | Description             |
 | ------------ | ---------------- | ----------------------- |
 | mov S, D     | D <\- S          | Move                    |
@@ -87,8 +89,6 @@ ATT 형식의 어셈블리 코드 읽는 법..
 | movl         | Move double word |
 | movq         | Move quad word   |
 | movabsq I, R | R <\- I          | Move absolute quad word |
-
-## 간단한 데이터 이동 인스트럭션
 
 Source에는 상수, 레지스터 저장 값, 메모리 저장 값이 올 수 있다.
 
@@ -102,6 +102,8 @@ movl은 상위 4바이트를 0으로 설정한다.
 movabsq는 64비트 상수를 위한 인스트럭션이다.
 Source로 상수(I)만을, Destination으로 레지스터(R)만을 가질 수 있다.
 
+### 0 확장 데이터 이동 인스트럭션
+
 | Instruction | Effect                                 | Description              |
 | ----------- | -------------------------------------- | ------------------------ |
 | movz S, R   | R <\- ZeroExtend(S)                    | Move with zero extension |
@@ -111,14 +113,14 @@ Source로 상수(I)만을, Destination으로 레지스터(R)만을 가질 수 �
 | movzbq      | Move zero-extended byte to quad word   |
 | movzwq      | Move zero-extended word to quad word   |
 
-## 0 확장 데이터 이동 인스트럭션
-
 상위 바이트를 모두 0으로 채우는 효과가 있다.
 unsigned형에서 많이 쓰일 것 같다.
 
 Destination으로 레지스터(R)만을 가질 수 있다.
 
 movzlq가 없는데, movl은 이미 이러한 효과를 가지고 있기 때문이다.
+
+### 부호 확장 데이터 이동 인스트럭션
 
 | Instruction | Effect                                      | Description              |
 | ----------- | ------------------------------------------- | ------------------------ |
@@ -130,8 +132,6 @@ movzlq가 없는데, movl은 이미 이러한 효과를 가지고 있기 때문�
 | movswq      | Move sign-extended word to quad word        |
 | movslq      | Move sign-extended double word to quad word |
 | cltq        | %rax <\- SignExtend(%eax)                   | Sign-extend %eax to %rax |
-
-## 부호 확장 데이터 이동 인스트럭션
 
 signed형에서 많이 쓰일 것 같다.
 
