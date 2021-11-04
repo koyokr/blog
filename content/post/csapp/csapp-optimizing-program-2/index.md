@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 프로그램 최적화 2"
-slug: csapp-optimizing-program-2
 date: 2017-03-22 17:48:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 저번 글에 이어서 계속한다.

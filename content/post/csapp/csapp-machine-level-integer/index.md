@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 기계어, 정수"
-slug: csapp-machine-level-integer
 date: 2017-03-07 01:09:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 amd x86-64 기준, 프로그램의 기계수준 표현에 대해서 알아본다.

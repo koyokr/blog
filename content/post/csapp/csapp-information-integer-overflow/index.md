@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 정보, 정수 오버플로"
-slug: csapp-information-integer-overflow
 date: 2017-03-03 16:40:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 정수 산술연산 중에서도 오버플로에 대해서 정리한다.

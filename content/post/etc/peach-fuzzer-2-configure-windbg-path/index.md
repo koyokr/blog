@@ -1,9 +1,7 @@
 ---
 title: Peach Fuzzer 2 WinDbg 경로 설정
-slug: peach-fuzzer-2-configure-windbg-path
 date: 2015-10-28 23:07:00 +0900 KST
 categories: [etc]
-markup: mmark
 ---
 
 퍼저가 자꾸 디버거 경로를 못잡았다.

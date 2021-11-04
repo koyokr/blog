@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 예외적인 제어흐름, 예외 상황"
-slug: csapp-ecf-exception
 date: 2017-04-26 18:00:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 ## 1. 예외적인 제어흐름 (Exceptional Control Flow)

@@ -1,9 +1,7 @@
 ---
 title: C++ 멀티스레드 무한루프 끝내기
-slug: cpp-multi-thread-exit-infinite-loop
 date: 2017-01-06 00:42:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 까먹을 예정이라서 저장

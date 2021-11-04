@@ -1,9 +1,7 @@
 ---
 title: fork - exec 대신 posix_spawn 쓰기
-slug: posix_spawn-instead-of-fork-exec
 date: 2017-02-19 19:01:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 `fork` - `exec` 조합으로 외부 프로그램을 실행하는 방법은 별로 권장하지 않는다고 한다.

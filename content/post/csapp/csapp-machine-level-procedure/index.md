@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 기계어, 프로시저"
-slug: csapp-machine-level-procedure
 date: 2017-03-09 18:20:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 오늘은 프로시저(Procedure)에 대해 정리한다.

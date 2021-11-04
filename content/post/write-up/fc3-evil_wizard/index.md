@@ -1,9 +1,7 @@
 ---
 title: FC3 evil_wizard -> dark_stone
-slug: fc3-evil_wizard
 date: 2017-01-06 23:33:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 dark_stone 코드

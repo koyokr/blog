@@ -1,9 +1,7 @@
 ---
 title: posix aio socket server 예제
-slug: posix-aio-socket-server-example
 date: 2016-08-15 00:08:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 열심히 코드를 작성하면서 검색하는데 aio는 소켓을 지원하지 않는다는 글이 있어서 깜짝 놀랐다 ㄷㄷ

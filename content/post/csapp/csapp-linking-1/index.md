@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 링킹 1"
-slug: csapp-linking-1
 date: 2017-04-11 18:43:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 리눅스와 ELF-64 포맷 기준.

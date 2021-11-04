@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - random
-slug: pwnable-kr-random
 date: 2016-01-17 21:58:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

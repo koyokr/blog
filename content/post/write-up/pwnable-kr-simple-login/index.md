@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - simple login
-slug: pwnable-kr-simple-login
 date: 2016-05-18 19:40:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

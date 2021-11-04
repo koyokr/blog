@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - blackjack
-slug: pwnable-kr-blackjack
 date: 2016-04-21 19:08:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

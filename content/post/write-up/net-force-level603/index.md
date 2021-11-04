@@ -1,9 +1,7 @@
 ---
 title: "Net-Force: level603 - Wanna play?!?!"
-slug: net-force-level603
 date: 2015-08-26 13:08:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ![Net-Force level603](net-force-level603.png)

@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 기계어, 정수 연산"
-slug: csapp-machine-level-integer-arithmetic
 date: 2017-03-07 19:09:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 정수 산술연산과 관련된 인스트럭션 정리.

@@ -1,9 +1,7 @@
 ---
 title: re2c랑 bison으로 파서 만들기
-slug: re2c-bison-parser
 date: 2016-11-29 23:07:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 파서를 만들 때,

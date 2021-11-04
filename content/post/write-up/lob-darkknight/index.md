@@ -1,9 +1,7 @@
 ---
 title: The Lord of the BOF - darkknight -> bugbear
-slug: lob-darkknight
 date: 2016-09-08 17:10:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 return to library 개념 이해하기

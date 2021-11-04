@@ -1,9 +1,7 @@
 ---
 title: FC4 cruel -> enigma
-slug: fc4-cruel
 date: 2017-01-07 03:05:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ret 영역 다음에 canary가 있다는 걸 생각하야 한다.

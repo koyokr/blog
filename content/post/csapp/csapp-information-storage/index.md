@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 정보, 저장"
-slug: csapp-information-storage
 date: 2017-02-28 21:10:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 ## 2.1 정보의 저장

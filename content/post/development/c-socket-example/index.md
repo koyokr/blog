@@ -1,9 +1,7 @@
 ---
 title: c socket 예제
-slug: c-socket-example
 date: 2016-08-12 00:52:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 여러 예제를 보고 따라하면서 많은 이해가 됐다.

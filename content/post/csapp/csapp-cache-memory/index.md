@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 캐시 메모리"
-slug: csapp-cache-memory
 date: 2017-03-26 22:56:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 오늘은 캐시 메모리에 대해 정리.

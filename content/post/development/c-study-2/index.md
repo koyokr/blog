@@ -1,9 +1,7 @@
 ---
 title: c 공부 정리 2
-slug: c-study-2
 date: 2016-08-10 02:32:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 최근에 공부한 함수들 벌써 다 까먹어서 여기다 적기로 했당

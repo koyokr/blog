@@ -1,9 +1,7 @@
 ---
 title: Hyper-V 2세대 우분투 설치하기
-slug: install-ubuntu-hyper-v-generation-2
 date: 2017-04-14 17:57:00 +0900 KST
 categories: [virtual-machine]
-markup: mmark
 ---
 
 Hyper-V에서는 가상 컴퓨터를 생성할 때 1세대와 2세대 중 선택해야 한다.

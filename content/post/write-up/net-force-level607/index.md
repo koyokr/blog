@@ -1,9 +1,7 @@
 ---
 title: "Net-Force: level607 - Infinite division"
-slug: net-force-level607
 date: 2015-08-11 21:34:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ![Net-Force level607](net-force-level607.png)

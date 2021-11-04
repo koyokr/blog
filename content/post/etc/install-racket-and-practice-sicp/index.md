@@ -1,9 +1,7 @@
 ---
 title: Racket 설치하고 SICP 실습하기
-slug: install-racket-and-practice-sicp
 date: 2017-12-17 21:12:00 +0900 KST
 categories: [etc]
-markup: mmark
 ---
 
 우분투 터미널 환경에서 racket을 설치하고 vim으로 코드를 작성하여

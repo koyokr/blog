@@ -1,9 +1,7 @@
 ---
 title: printf와 8바이트 정수
-slug: printf-8byte-integer
 date: 2016-08-10 18:43:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 `int64_t`는 보통 아래처럼 정의되어 있다.

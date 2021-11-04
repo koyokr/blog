@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 링킹 2"
-slug: csapp-linking-2
 date: 2017-04-12 21:15:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 이번 글에서는 실행 파일, 라이브러리 링크, 라이브러리 삽입에 대해 정리한다.

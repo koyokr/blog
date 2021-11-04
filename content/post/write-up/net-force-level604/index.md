@@ -1,9 +1,7 @@
 ---
 title: "Net-Force: level604 - Aaarrrgghhh!!"
-slug: net-force-level604
 date: 2015-08-26 12:45:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ![Net-Force level604](net-force-level604.png)

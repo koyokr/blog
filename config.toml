@@ -1,19 +1,22 @@
 baseURL = "https://koyo.kr/"
 title = "KOYO KR"
+paginate = 5
 theme = "beautifulhugo"
+
+enableRobotsTXT = true
 defaultContentLanguage = "ko"
 languageCode = "ko"
 hasCJKLanguage = true
-metaDataFormat = "yaml"
-#pygmentsStyle = "github"
+
 pygmentsUseClasses = true
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
+
 disqusShortname = "koyo"
 googleAnalytics = "UA-72551408-1"
 
 [permalinks]
-  post = "/post/:slug/"
+  post = "/post/:filename/"
 
 [params]
   subtitle = "컴퓨터할줄모름"
@@ -22,36 +25,33 @@ googleAnalytics = "UA-72551408-1"
   commit = false
   rss = true
   comments = true
-  readingTime = true
+  readingTime = false
+  hideAuthor = true
   useHLJS = false
   socialShare = false
 
 [author]
-  name = "koyo"
-  website = "https://koyo.kr"
+  website = "https://koyo.kr/"
   email = "koyo@koyo.kr"
   github = "koyokr"
   linkedin = "koyo"
 
+[menu]
 [[menu.main]]
   name = "Home"
-  url = ""
+  url = "/"
   weight = 1
-
 [[menu.main]]
   name = "Categories"
-  url = "categories"
+  url = "/categories/"
   weight = 2
-
 [[menu.main]]
   name = "Tags"
-  url = "tags"
+  url = "/tags/"
   weight = 3
-
 [[menu.main]]
   name = "About"
-  url = "page/about/"
+  url = "/about/"
   weight = 4
-
 [sitemap]
   priority = 0.5

@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - coin1
-slug: pwnable-kr-coin1
 date: 2016-03-27 22:26:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

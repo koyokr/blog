@@ -1,9 +1,7 @@
 ---
 title: Ubuntu GCC 보안 옵션
-slug: ubuntu-gcc-security-flags
 date: 2017-05-12 14:58:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 ## 기준

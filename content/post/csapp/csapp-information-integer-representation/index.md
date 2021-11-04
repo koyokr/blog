@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 정보, 정수 형변환"
-slug: csapp-information-integer-representation
 date: 2017-03-02 22:02:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 중요한 것 중에서도 글로 적기 쉬운 것만 적음

@@ -1,9 +1,7 @@
 ---
 title: FC3 iron_golem -> dark_eyes
-slug: fc3-iron_golem
 date: 2017-01-05 01:40:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ret sleding에 대해 쓰는 글

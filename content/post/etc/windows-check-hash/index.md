@@ -1,10 +1,7 @@
 ---
 title: windows 파일 속성에서 파일 해시 확인하기
-slug: windows-check-hash
 date: 2016-01-17 22:18:00 +0900 KST
 categories: [etc]
-markup: mmark
-aliases: [/post/windows-file-properties-check-hash/]
 ---
 
 ![HashTab](hashtab.png)

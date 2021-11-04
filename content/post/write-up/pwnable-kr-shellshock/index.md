@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - shellshock
-slug: pwnable-kr-shellshock
 date: 2016-04-24 17:39:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

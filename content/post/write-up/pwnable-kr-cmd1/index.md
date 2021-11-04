@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - cmd1
-slug: pwnable-kr-cmd1
 date: 2016-04-25 16:36:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

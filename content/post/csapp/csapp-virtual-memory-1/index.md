@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 가상 메모리 1"
-slug: csapp-virtual-memory-1
 date: 2017-06-08 17:16:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 현대 시스템은 가상 메모리(Virtual memory). VM이라고 알려진

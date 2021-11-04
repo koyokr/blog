@@ -1,10 +1,7 @@
 ---
 title: "CS:APP - 기계어, 배열과 정렬"
-slug: csapp-machine-level-array-alignment
 date: 2017-03-13 17:51:00 +0900 KST
 categories: [csapp]
-markup: mmark
-aliases: [/post/csapp-machine-level-array-sort/]
 ---
 
 ## 1. 배열과 포인터 연산

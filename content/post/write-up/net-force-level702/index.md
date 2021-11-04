@@ -1,9 +1,7 @@
 ---
 title: "Net-Force: level702 - What am I :-)"
-slug: net-force-level702
 date: 2015-08-04 20:12:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ![Net-Force level702](net-force-level702.png)

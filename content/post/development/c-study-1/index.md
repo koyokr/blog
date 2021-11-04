@@ -1,9 +1,7 @@
 ---
 title: c 공부 정리 1
-slug: c-study-1
 date: 2016-08-09 02:49:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 ## 1. 자료형 크기

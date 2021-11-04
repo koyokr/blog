@@ -1,9 +1,7 @@
 ---
 title: 귀여운 비누
-slug: cuty-soaps
 date: 2016-08-02 02:58:00 +0900 KST
 categories: [etc]
-markup: mmark
 ---
 
 ![Soups](soups.jpg)

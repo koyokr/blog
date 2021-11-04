@@ -1,9 +1,7 @@
 ---
 title: Windows에서 Python 3.4.4, Qt 4.8.7, PySide 1.2.4 설치하기
-slug: install-python-qt-pyside-in-windows
 date: 2016-10-08 01:17:00 +0900 KST
 categories: [etc]
-markup: mmark
 ---
 
 PySide 설치하는 방법 자세하게 적는 글

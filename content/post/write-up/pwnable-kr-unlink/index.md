@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - unlink
-slug: pwnable-kr-unlink
 date: 2019-06-10 12:00:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

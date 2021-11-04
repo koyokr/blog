@@ -1,9 +1,7 @@
 ---
 title: system 대신 fork - exec 쓰기
-slug: fork-exec-instead-of-system
 date: 2016-08-17 02:23:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 > [fork - exec 대신 posix_spawn 쓰기](/post/posix_spawn-instead-of-fork-exec/)

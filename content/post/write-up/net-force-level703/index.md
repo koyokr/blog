@@ -1,9 +1,7 @@
 ---
 title: "Net-Force: level703 - Flash Login"
-slug: net-force-level703
 date: 2015-08-03 16:37:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ![Net-Force level703 1](net-force-level703-1.png)

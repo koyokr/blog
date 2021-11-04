@@ -1,9 +1,7 @@
 ---
 title: "Net-Force: level704 - Chemical Stuff"
-slug: net-force-level704
 date: 2015-08-04 20:36:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ![Net-Force level704](net-force-level704.png)

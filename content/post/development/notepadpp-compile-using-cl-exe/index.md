@@ -1,9 +1,7 @@
 ---
 title: notepad++에서 cl.exe로 컴파일하기
-slug: notepadpp-compile-using-cl-exe
 date: 2016-01-19 15:29:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 이 글은 notepad++에서 cl.exe를 이용해서 c언어를 컴파일하는 방법을 적는다.

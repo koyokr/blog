@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 기계어, 부동소수점"
-slug: csapp-machine-level-floating-point
 date: 2017-03-14 15:37:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 이 내용 이전에 gdb 사용법, 버퍼 오버플로, 메모리 보호기법,

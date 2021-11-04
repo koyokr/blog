@@ -1,9 +1,7 @@
 ---
 title: FC3 hell_fire -> evil_wizard
-slug: fc3-hell_fire
 date: 2017-01-06 00:15:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 pop pop ret을 어떻게 쓰는 건지 이 문제를 풀고 알게 됐다.

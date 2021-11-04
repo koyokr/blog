@@ -1,9 +1,7 @@
 ---
 title: vcpkg integrate install에서 dynamic 대신 static 적용하기
-slug: vcpkg-static-instead-of-dynamic
 date: 2017-03-19 22:08:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 우연히 vcpkg를 알게 됐는데 그동안 내가 찾았던 기능이 여기 있었다.

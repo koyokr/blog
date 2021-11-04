@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 프로그램 최적화 1"
-slug: csapp-optimizing-program-1
 date: 2017-03-21 13:19:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 오늘은 인강도 참고했다. 이어폰 안가져와서 교수님 목소리 못듣고 페이지만 봄ㅜㅜ

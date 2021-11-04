@@ -1,9 +1,7 @@
 ---
 title: Hyper-V 활성화/비활성화
-slug: enable-or-disable-hyper-v
 date: 2017-04-12 21:25:00 +0900 KST
 categories: [virtual-machine]
-markup: mmark
 ---
 
 관리자 권한으로 실행한다.

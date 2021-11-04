@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - leg
-slug: pwnable-kr-leg
 date: 2016-01-29 16:59:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

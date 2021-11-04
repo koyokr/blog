@@ -1,9 +1,7 @@
 ---
 title: TU CTF 2016 - WoO2
-slug: tu-ctf-2016-woo2
 date: 2016-05-17 21:16:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 TU CTF 2016에서 못푼 문제

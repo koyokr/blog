@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 예외적인 제어흐름, 시그널 1"
-slug: csapp-ecf-signal-1
 date: 2017-05-23 18:01:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 Signal!

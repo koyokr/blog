@@ -1,9 +1,7 @@
 ---
 title: "Net-Force: level705 - Hmm I don't see it..."
-slug: net-force-level705
 date: 2015-08-03 17:12:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 Flash Login에 이어서 2번째 문제이다. 이번 건 쉬웠다.

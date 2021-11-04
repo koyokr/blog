@@ -1,9 +1,7 @@
 ---
 title: The Lord of the BOF - assassin -> zombie_assassin
-slug: lob-assassin
 date: 2017-01-04 17:14:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 코드는 이렇다.

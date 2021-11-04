@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 예외적인 제어흐름, 시그널 2"
-slug: csapp-ecf-signal-2
 date: 2017-05-25 15:34:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 이 글에서는 동시성을 다룬다.

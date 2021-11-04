@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - memcpy
-slug: pwnable-kr-memcpy
 date: 2016-05-01 02:05:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

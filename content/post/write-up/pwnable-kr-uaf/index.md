@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - uaf
-slug: pwnable-kr-uaf
 date: 2016-04-27 21:51:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

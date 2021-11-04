@@ -1,9 +1,7 @@
 ---
 title: 꼬리재귀로 이항계수 구현하기
-slug: tail-recursion-binomial-coefficient
 date: 2016-12-26 01:40:00 +0900 KST
 categories: [development]
-markup: mmark
 ---
 
 $$

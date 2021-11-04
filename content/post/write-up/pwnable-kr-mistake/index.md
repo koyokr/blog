@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - mistake
-slug: pwnable-kr-mistake
 date: 2016-02-15 17:28:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 예외적인 제어흐름, 비지역성 점프"
-slug: csapp-ecf-nonlocal-jump
 date: 2017-05-27 15:20:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 ## 1. 비지역성 점프(Nonlocal jumps)

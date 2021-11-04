@@ -1,9 +1,7 @@
 ---
 title: Windows 가상머신 파일 다운로드
-slug: download-windows-for-virtual-machine
 date: 2016-10-10 16:40:00 +0900 KST
 categories: [virtual-machine]
-markup: mmark
 ---
 
 <https://developer.microsoft.com/en-us/microsoft-edge/api/tools/vms/>

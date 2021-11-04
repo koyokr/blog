@@ -1,9 +1,7 @@
 ---
 title: "Net-Force: level706 - Made in Taiwan"
-slug: net-force-level706
 date: 2015-08-04 20:49:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ![Net-Force level706](net-force-level706.png)

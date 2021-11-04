@@ -1,9 +1,7 @@
 ---
 title: Pwnable KR - asm
-slug: pwnable-kr-asm
 date: 2019-06-05 12:15:00 +0900 KST
 categories: [write-up]
-markup: mmark
 ---
 
 ## 문제

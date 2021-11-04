@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 예외적인 제어흐름, 프로세스 제어"
-slug: csapp-ecf-process-control
 date: 2017-05-20 17:20:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 이번 글에선 머리 굴려서 정리할 게 없다.

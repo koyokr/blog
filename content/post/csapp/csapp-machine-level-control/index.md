@@ -1,9 +1,7 @@
 ---
 title: "CS:APP - 기계어, 제어문"
-slug: csapp-machine-level-control
 date: 2017-03-08 16:35:00 +0900 KST
 categories: [csapp]
-markup: mmark
 ---
 
 오늘은 제어문

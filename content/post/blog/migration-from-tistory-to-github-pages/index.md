@@ -1,10 +1,8 @@
 ---
 title: Tistory에서 Github Pages로 이사하기
-slug: migration-from-tistory-to-github-pages
 date: 2018-06-09 19:22:00 +0900 KST
 categories: [blog]
 tags: [tistory, github, hugo, travis-ci]
-markup: mmark
 ---
 
 ## Tistory에서

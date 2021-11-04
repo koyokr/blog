@@ -1,9 +1,7 @@
 ---
 title: Hyper-V에서 네트워크 설정하기
-slug: configure-network-in-hyper-v
 date: 2017-04-14 17:27:00 +0900 KST
 categories: [virtual-machine]
-markup: mmark
 ---
 
 Hyper-V를 써보기로 했다.
