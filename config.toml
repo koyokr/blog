@@ -31,6 +31,7 @@ googleAnalytics = "UA-72551408-1"
   socialShare = false
 
 [author]
+  name = "koyo"
   website = "https://koyo.kr/"
   email = "koyo@koyo.kr"
   github = "koyokr"
