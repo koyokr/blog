@@ -12,7 +12,6 @@ pygmentsUseClasses = true
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 
-disqusShortname = "koyo"
 googleAnalytics = "UA-72551408-1"
 
 [permalinks]
@@ -29,6 +28,16 @@ googleAnalytics = "UA-72551408-1"
   hideAuthor = true
   useHLJS = false
   socialShare = false
+
+  [params.giscus]
+    repo = "koyokr/koyo.kr"
+    repoId = "MDEwOlJlcG9zaXRvcnkxMzg4OTAzOTY="
+    category = "Announcements"
+    categoryId = "DIC_kwDOCEdMnM4B_3I_"
+    mapping = "pathname"
+    reactionsEnabled = true
+    theme = "light"
+    lang = "en"
 
 [author]
   name = "koyo"
@@ -54,5 +63,6 @@ googleAnalytics = "UA-72551408-1"
   name = "About"
   url = "/about/"
   weight = 4
+
 [sitemap]
   priority = 0.5
