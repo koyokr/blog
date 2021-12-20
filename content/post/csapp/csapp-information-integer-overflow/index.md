@@ -12,7 +12,7 @@ $$0 \le x, y \lt 2^w$$인 $$x$$, $$y$$에 대해서 다음이 성립한다. $$w$
 
 $$
 x +_w^u y = \begin{cases}
-x+y,     & x+y \lt 2^w             & Normal \\
+x+y,     & x+y \lt 2^w             & Normal \newline
 x+y-2^w, & 2^w \le x+y \lt 2^{w+1} & Overflow
 \end{cases}
 $$
@@ -79,8 +79,8 @@ $$-2^{w-1} \le x, y \le 2^{w-1} - 1$$인 $$x$$, $$y$$에 대해서 다음이 성
 
 $$
 x +_w^t y = \begin{cases}
-x+y-2^w, & 2^{w-1} \le x+y              & Positive \space overflow \\
-x+y,     & -2^{w-1} \le x+y \lt 2^{w-1} & Normal \\
+x+y-2^w, & 2^{w-1} \le x+y              & Positive \space overflow \newline
+x+y,     & -2^{w-1} \le x+y \lt 2^{w-1} & Normal \newline
 x+y+2^w, & x+y \lt -2^{w-1}             & Negative \space overflow
 \end{cases}
 $$
@@ -97,7 +97,7 @@ $$x$$, $$y$$가 int형일 때, $$x+y$$가 `INT_MAX`보다 크거나 `INT_MIN`보
 
 $$
 \begin{aligned}
-Positive \space overflow & : \space x \gt 0, y \gt 0, s \le 0 \\
+Positive \space overflow & : \space x \gt 0, y \gt 0, s \le 0 \newline
 Negative \space overflow & : \space x \lt 0, y \lt 0, s \ge 0
 \end{aligned}
 $$
@@ -213,7 +213,7 @@ $$x*y$$ 연산에 대해서 아래와 같은 정의를 내리면,
 
 $$
 \begin{aligned}
-x \cdot y & = p + 2^w t \\
+x \cdot y & = p + 2^w t \newline
 p & = x \cdot q + r, |r| \lt |x|
 \end{aligned}
 $$

@@ -349,7 +349,7 @@ $$T_{MP}$$를 결정하고자 한다.
 
 $$
 \begin{aligned}
-T_{ran} & = T_{avg}(0.5) = T_{OK} + 0.5T_{MP} \\
+T_{ran} & = T_{avg}(0.5) = T_{OK} + 0.5T_{MP} \newline
 T_{MP} & = 2(T_{ran} - T_{OK})
 \end{aligned}
 $$
@@ -362,8 +362,8 @@ $$
 
 $$
 \begin{aligned}
-T_{OK} & = 8 \\
-T_{ran} & = 17.5 \\
+T_{OK} & = 8 \newline
+T_{ran} & = 17.5 \newline
 T_{MP} & = 19
 \end{aligned}
 $$
