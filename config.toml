@@ -1,5 +1,5 @@
 baseURL = "https://koyo.kr/"
-title = "KOYO KR"
+homeTitle = "KOYO KR"
 paginate = 5
 theme = "beautifulhugo"
 
