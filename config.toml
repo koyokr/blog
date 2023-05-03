@@ -12,7 +12,7 @@ pygmentsUseClasses = true
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 
-googleAnalytics = "G-T4NNENB2HM"
+googleAnalytics = "G-F9925BGS1X"
 
 [permalinks]
   post = "/post/:filename/"
