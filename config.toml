@@ -31,7 +31,7 @@ googleAnalytics = "G-F9925BGS1X"
   socialShare = false
 
   [params.giscus]
-    repo = "koyokr/koyo.kr"
+    repo = "koyokr/blog"
     repoId = "MDEwOlJlcG9zaXRvcnkxMzg4OTAzOTY="
     category = "Announcements"
     categoryId = "DIC_kwDOCEdMnM4B_3I_"
