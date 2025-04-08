@@ -1,69 +1,62 @@
-baseURL = "https://koyo.kr/"
-title = "KOYO.KR"
-paginate = 5
-theme = "beautifulhugo"
+# serene v5.0.1
+#
+# - docs: https://github.com/isunjn/serene/blob/latest/USAGE.md
+# - check for updates: https://github.com/isunjn/serene/releases
+#
+#=========================================================================================
 
-enableRobotsTXT = true
-defaultContentLanguage = "ko"
-languageCode = "ko"
-hasCJKLanguage = true
+base_url = "https://koyo.kr"
+title = "koyo-kr"
+description = "Perosnal site."
+default_language = "ko"
+theme = "serene"
+output_dir = "public"
+compile_sass = true
+minify_html = false # Keep this false, as it may cause issues with some styles
+build_search_index = false # Keep this false, search is temporarily unsupported
+generate_feeds = true # Whether to generate a feed file in root, read docs for more info about rss feed
+# feed_filenames = ["feed.xml"] # "feed.xml" | "atom.xml" | "rss.xml", read docs for more info
+taxonomies = [{ name = "tags" }, { name = "categories" }]
 
-pygmentsUseClasses = true
-pygmentsCodefences = true
-pygmentsCodefencesGuessSyntax = true
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+extra_syntaxes_and_themes = ["highlight_themes"]
+highlight_themes_css = [
+  { theme = "serene-light", filename = "hl-light.css" },
+  { theme = "serene-dark", filename = "hl-dark.css" },
+]
+render_emoji = false
+external_links_target_blank = false
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = false
 
-googleAnalytics = "G-F9925BGS1X"
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
 
-[permalinks]
-  post = "/post/:filename/"
+#=========================================================================================
 
-[params]
-  homeTitle = "KOYO.KR"
-  subtitle = "컴퓨터할줄모름"
-  logo = "img/avatar.jpg"
-  favicon = "/favicon.png"
-  commit = false
-  rss = true
-  comments = true
-  readingTime = false
-  hideAuthor = true
-  useHLJS = false
-  socialShare = false
+[extra]
 
-  [params.giscus]
-    repo = "koyokr/blog"
-    repoId = "MDEwOlJlcG9zaXRvcnkxMzg4OTAzOTY="
-    category = "Announcements"
-    categoryId = "DIC_kwDOCEdMnM4B_3I_"
-    mapping = "pathname"
-    reactionsEnabled = true
-    theme = "light"
-    lang = "en"
+sections = [
+  { name = "posts", path = "/posts", is_external = false },
+  # { name = "tags", path = "/tags", is_external = false },
+  # { name = "github", path = "https://github.com/<your-username>", is_external = true },
+]
+blog_section_path = "/posts"
 
-[author]
-  name = "koyo"
-  website = "https://koyo.kr/"
-  email = "koyo@koyo.kr"
-  github = "koyokr"
-  linkedin = "koyo"
+back_link_text = "Back" # Text of the back button
+force_theme = false # false | "light" | "dark"
 
-[menu]
-[[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 1
-[[menu.main]]
-  name = "Categories"
-  url = "/categories/"
-  weight = 2
-[[menu.main]]
-  name = "Tags"
-  url = "/tags/"
-  weight = 3
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 4
+footer_copyright = "© 2025 koyo"
+footer_credits = true # Whether to show "Built with zola and serene" in footer
 
-[sitemap]
-  priority = 0.5
+not_found_error_text = "404 Not Found"
+not_found_recover_text = "« back to home »"
+
+reaction = false # Whether to enable anonymous emoji reactions (Note: You need to set up a working api endpoint to enable this feature)
+reaction_align = "right" # "left" | "center" | "right"
+reaction_endpoint = "https://example.com/api/reaction"

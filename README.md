@@ -1,3 +1,0 @@
-# koyo.kr
-
-blog content

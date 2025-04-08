@@ -1,4 +1,4 @@
-[submodule "themes/beautifulhugo"]
-	path = themes/beautifulhugo
-	url = https://github.com/koyokr/beautifulhugo
-	branch = master
+[submodule "themes/serene"]
+	path = themes/serene
+	url = https://github.com/isunjn/serene.git
+	branch = latest
