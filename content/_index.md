@@ -8,8 +8,8 @@ lang = 'ko'
 footer = false
 
 # If you don't want to display id/bio/avatar, simply comment out that line
-name = "koyo-name"
-id = "koyo-id"
+name = "koyo"
+# id = "koyokr"
 bio = "컴퓨터할줄모름"
 avatar = "img/avatar.jpg"
 links = [
