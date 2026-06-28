@@ -1,4 +1,4 @@
-# serene v5.0.1
+# serene v5.6.3
 #
 # - docs: https://github.com/isunjn/serene/blob/latest/USAGE.md
 # - check for updates: https://github.com/isunjn/serene/releases
@@ -19,18 +19,17 @@ generate_feeds = true # Whether to generate a feed file in root, read docs for m
 taxonomies = [{ name = "tags" }, { name = "categories" }]
 
 [markdown]
-highlight_code = true
-highlight_theme = "css"
-extra_syntaxes_and_themes = ["highlight_themes"]
-highlight_themes_css = [
-  { theme = "serene-light", filename = "hl-light.css" },
-  { theme = "serene-dark", filename = "hl-dark.css" },
-]
 render_emoji = false
 external_links_target_blank = false
 external_links_no_follow = true
 external_links_no_referrer = true
 smart_punctuation = false
+github_alerts = true
+
+[markdown.highlighting]
+style = "class"
+light_theme = "github-light"
+dark_theme = "github-dark"
 
 [slugify]
 paths = "on"
