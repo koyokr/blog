@@ -1,5 +1,5 @@
 +++
-title = "koyo-blog"
+title = "koyo.blog"
 description = "Personal blog site."
 sort_by = "date"
 template = "blog.html"
@@ -11,7 +11,7 @@ generate_feeds = false
 lang = "ko"
 
 title = "Posts"
-subtitle = "I write about ...."
+subtitle = "I write about security"
 
 date_format = "%b %-d, %Y"
 

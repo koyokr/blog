@@ -6,8 +6,8 @@
 #=========================================================================================
 
 base_url = "https://koyo.kr"
-title = "koyo-kr"
-description = "Perosnal site."
+title = "koyo.kr"
+description = "Personal site."
 default_language = "ko"
 theme = "serene"
 output_dir = "public"

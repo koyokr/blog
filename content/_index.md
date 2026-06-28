@@ -14,7 +14,6 @@ bio = "컴퓨터할줄모름"
 avatar = "img/avatar.jpg"
 links = [
     { name = "GitHub", icon = "github", url = "https://github.com/koyokr" },
-    { name = "LinkedIn", icon = "linkedin", url = "https://www.linkedin.com/in/koyo/" },
 ]
 
 # Show a few recent posts in home page
@@ -24,4 +23,4 @@ recent_more_text = "more »"
 date_format = "%b %-d, %Y"
 +++
 
-Hi, I'm ...
+Hi,
